@@ -2,7 +2,7 @@
 
 I’m designing a tattoo sleeve of quotes similar to the cover picture. These quotes both represent and have shaped my life in various ways. I thought I’d share.
 <br/><br/>
->###There is grandeur in this view of life…
+###There is grandeur in this view of life…
 
 These words are the beginning of the final sentence of Darwin’s immortal On the Origin of Species. Darwin has had a lager impact on my life than any other scientist. Despite my first love of astronomy and physics, with Einstein and quantum mechanics overthrowing the classical world, Darwin’s theory of evolution and its implications have directed more of the twists and turns of my life: everything from my first glimpse of religious fundamentalism, to my leaving the church, to my decision to go to grad school.
 
@@ -10,7 +10,7 @@ Evolution connects the present to the distant past in a single, unbroken chain o
 
 Darwin’s words have been a rallying cry to me. The minutes that make up our lives have become more precious as the result of natural law than they were as a gift from a loving God. Making a difference in the here and now has become more important, not less, justice more urgent, the stars more beautiful. Grandeur indeed.
 <br/><br/>
->###plant sequoias.
+###plant sequoias.
 
 The sentence comes from Wendell Berry’s poem, “Manifesto: The Mad Farmer Liberation Front” and is already tattooed on my left shoulder in a typewriter font from Southside Tattoo in Austin. I left Christianity more than a decade ago, but I’ve often returned to Berry during the intervening years. His Christianity and his conservatism are among the few that I find myself still respecting. He strikes me as someone who takes his Truth and his poetry and faces head-on the messy storm of reality, but instead of blindly holding on to just this or that, he comes away humbled — changed but quietly so, not angered or deflated, just wiser, slyer.
 
@@ -26,7 +26,7 @@ Call that profit. Prophesy such returns.
 -Wendell Berry
 
 <br/><br/>
->###Eventually, all things merge into one, and a river runs through it.
+###Eventually, all things merge into one, and a river runs through it.
 
 From both the short story and the film adaptation, the closing lines of A River Runs Through It have long been seared into my memory. The film, combined with two amazing AP teachers and a little Dead Poets, convinced me to start my undergrad years as an English major. I wanted to write and teach literature at a university, opening the minds of young people to the wonder of language. I was enamored with the power of words, how language can simultaneously be a confining cage and the means to break free, tools with which one can build all the knowledge in the universe or pen a verse to communicate the ineffable.
 
@@ -38,7 +38,7 @@ Here’s the quote in full:
 I am haunted by waters.”
 
 <br/><br/>
->###…on a mote of dust suspended in a sunbeam.”
+###…on a mote of dust suspended in a sunbeam.”
 
 As the Voyager I spacecraft approached the edge of our solar system in 1989, it opened its lens back towards home and took a picture of earth across the emptiness. The resulting image was named Pale Blue Dot. You can see the earth as a small blue-white pixel in the middle of the brightest beam. This is the farthest picture we have of us, the most perspective, the widest angle, 3.7 billion miles away. The quote is from Carl Sagan, who was the impetus behind the picture being taken and wrote a book by the same name.
 Seeing the earth from above has a documented effect on those few souls fortunate enough to have flown so high. Dubbed the overview effect, astronauts have experienced a “cognitive shift” from seeing the finitude and fragility of the earth suspended in the vast nothingness of space. Until Elon calls me up and offers me a lift, Sagan’s reflection is probably as close as I’ll get to experiencing it.
@@ -56,7 +56,7 @@ Ed Mitchell was an Apollo 14 astronaut who walked on the surface of the moon. He
 Amen.
 
 <br/><br/>
->###Though passion may have strained, it must not break our bonds of affection. The mystic chords of memory will swell when again touched, as surely they will be, by the better angels of our nature.
+###Though passion may have strained, it must not break our bonds of affection. The mystic chords of memory will swell when again touched, as surely they will be, by the better angels of our nature.
 
 These are the closing lines of the film American History X. The words are adapted from Lincoln’s First Inaugural Address given on the eve of the Civil War.
 

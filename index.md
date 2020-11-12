@@ -1,4 +1,3 @@
-## Chad W Gardner
 Welcome to my new, minimalist website (i.e. a cute way of saying I've never done this before,
 am therefore sort of cheating using this Markdown to webiste via Jekyll via Github thing, and
 I still don't really know what I'm doing).
