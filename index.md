@@ -7,3 +7,6 @@ Here's a cute picture of my wife that also includes me.
 
 [Here's a link](posts/tattoo.md) to the my post about the tattoo I'm designing. I had this on Medium,
 but that seemed silly.
+
+Some [Christmas 2020 reflections](posts/christmas.md).
+
