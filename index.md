@@ -3,7 +3,7 @@ am therefore sort of cheating using this Markdown to webiste via Jekyll via Gith
 I still don't really know what I'm doing).
 
 Here's a cute picture of my wife that also includes me.
-![Image](lib/profile_pic.jpg)
+![Image](lib/profile_pic.jpg =100x20)
 
 [Here's a link](posts/tattoo.md) to the my post about the tattoo I'm designing. I had this on Medium,
 but that seemed silly.
