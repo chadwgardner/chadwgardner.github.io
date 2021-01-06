@@ -74,8 +74,14 @@ But I still must hope for peace, for transcendence. I don’t know what that loo
 In aphorism 341 of _The Gay Science_, Nietzsche introduces his notion of the eternal return. This often gets misconstrued as an actual ontological claim, but Nietzsche isn't positing a theory about how the afterlife works; he's giving us some perspective:
 
 Imagine you are going about your normal drudge of a day when you are suddenly confronted by a terrible demon. This demon condemns you to live your life over again, eternally repeated, exactly as it happened, with every mistake left unfixed and every joy and pain relived, over and over again. How would you respond, Nietzsche asks,
->"Would you not throw yourself down and gnash your teeth and curse the demon who spoke thus? Or have you once experienced a tremendous moment when you would have answered him: 'You are a god, and never have I heard anything more divine.' ... How well disposed would you have to become to yourself and to life _to long for nothing more fervently_ than for this ultimate eternal confirmation and seal?
+>Would you not throw yourself down and gnash your teeth and curse the demon who spoke thus? Or have you once experienced a tremendous moment when you would have answered him: 'You are a god, and never have I heard anything more divine.' ... How well disposed would you have to become to yourself and to life _to long for nothing more fervently_ than for this ultimate eternal confirmation and seal?
 
 This moment is the most precious that exists for the simple reason that it is the _only_ moment that exists, and for it be just as it is, all the moments before must have unfolded just so. _That_ is an affirmation of life, of now, of this. The current moment might not be a pleasant one&mdash;it could be filled with sorrow, or regret, or suffering&mdash;but it is all there is, and I mean that not in a melancholic sense but in a _magestic_ sense. Sam Harris has a line he uses in some of his daily guided meditations once he brings you to a similar realization, that this moment is everything there is, "How can _everything_, not be enough?"
 
 Nietzsche's work is so often occluded [by his Nazi sister](https://en.wikipedia.org/wiki/Elisabeth_F%C3%B6rster-Nietzsche). To me, this one aphorism encapsulates his thought better than any other. Throw off the moralism and guilt of original sin, grasp this moment with both hands and see that is good. This full accounting and acceptance of ourselves and the power of self-creation and actualization that this acceptance brings, this is the true hope and aspiration of humanity. The _&Uuml;bermensch_ resides in each of us, in this tremendous moment, waiting to be realized, to be released!
+
+<br/><br/>
+### But let there be spaces in your togetherness. And let the winds of heaven dance between you.
+
+I think I first heard these words from _The Prophet_ by Kahlil Gibran at a friend's wedding in Tallahassee. It was at a Unitarian Universalist church, and I remember that it was the first time I agreed with an entire sermon in years. The pastor laughed when I told her.
+
