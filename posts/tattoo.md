@@ -85,3 +85,16 @@ Nietzsche's work is so often occluded [by his Nazi sister](https://en.wikipedia.
 
 I think I first heard these words from _The Prophet_ by Kahlil Gibran at a friend's wedding in Tallahassee. It was at a Unitarian Universalist church, and I remember that it was the first time I agreed with an entire sermon in years. The pastor laughed when I told her.
 
+This one is difficult to summarize in a short little post like this since it basically encompasses my entire marriage. Growing up in the Catholic church, the togetherness, the "two made one" aspect of marriage was always the most emphasized. I imagine this is true in more conservative circles as well, with the roles of each person in the new family unit more defined and prescribed. The passage on marriage from _The Prophet_, however, emphasizes the separateness, the individuality of each partner. Just following the quote above, the passage continues,
+>Love one another, but make not a bond of love: </br>
+>Let it rather be a moving sea between you...</br>
+>Sing and dance together and be joyous, </br>
+>but let each one of you be alone, </br>
+>Even as the strings of a lute are alone </br>
+>though the quiver with the same music. 
+
+This feels so human, so _real_, to me. When Agata and I were dating, we read a book called _A Severe Mercy_ about a young non-religious couple, Sheldon and Davy, who become Christian together, but then she dies of cancer and he must put the pieces of his life and faith back together. I didn't identify much with the book except for the second chapter, "The Shining Barrier." The Sheldon and Davy decide to erect a "shining barrier" between them and the world, a barrier made from the strength of their love,  
+
+>For the pillars of the temple stand apart,</br>
+>And the oak tree and the cypress grow </br>
+>not in each other's shadow.
