@@ -1,7 +1,7 @@
 ## Words to Ink
 
 I’m designing a tattoo sleeve of quotes similar to the cover picture. These quotes both represent and have shaped my life in various ways. I thought I’d share.
-<br/><br/>
+<br><br>
 ### There is grandeur in this view of life…
 
 These words are the beginning of the final sentence of Darwin’s immortal On the Origin of Species. Darwin has had a lager impact on my life than any other scientist. Despite my first love of astronomy and physics, with Einstein and quantum mechanics overthrowing the classical world, Darwin’s theory of evolution and its implications have directed more of the twists and turns of my life: everything from my first glimpse of religious fundamentalism, to my leaving the church, to my decision to go to grad school.
@@ -9,7 +9,7 @@ These words are the beginning of the final sentence of Darwin’s immortal On th
 Evolution connects the present to the distant past in a single, unbroken chain of mothers, fathers, and children, a chain that runs through all the theological cracks I tried to cement over for years. No soul or anthropocentrism or supernatural explanation survives — we are simply the stuff of the universe my friends, separated from the muck only by the subtle differences between mother and daughter multiplied across the ages. But this, this is grandeur. No snap of godly fingers or Word spoken into the void can compete with supernova remnants slowly becoming aware of the universe into which they exploded, then turning around and measuring the warmth of space left over from the Big Bang itself.
 
 Darwin’s words have been a rallying cry to me. The minutes that make up our lives have become more precious as the result of natural law than they were as a gift from a loving God. Making a difference in the here and now has become more important, not less, justice more urgent, the stars more beautiful. Grandeur indeed.
-<br/><br/>
+<br><br>
 ### plant sequoias.
 
 The sentence comes from Wendell Berry’s poem, “Manifesto: The Mad Farmer Liberation Front” and is already tattooed on my left shoulder in a typewriter font from Southside Tattoo in Austin. I left Christianity more than a decade ago, but I’ve often returned to Berry during the intervening years. His Christianity and his conservatism are among the few that I find myself still respecting. He strikes me as someone who takes his Truth and his poetry and faces head-on the messy storm of reality, but instead of blindly holding on to just this or that, he comes away humbled — changed but quietly so, not angered or deflated, just wiser, slyer.
@@ -25,7 +25,7 @@ when they have rotted into the mold.
 Call that profit. Prophesy such returns.  
 -Wendell Berry
 
-<br/><br/>
+<br><br>
 ### Eventually, all things merge into one, and a river runs through it.
 
 From both the short story and the film adaptation, the closing lines of A River Runs Through It have long been seared into my memory. The film, combined with two amazing AP teachers and a little Dead Poets, convinced me to start my undergrad years as an English major. I wanted to write and teach literature at a university, opening the minds of young people to the wonder of language. I was enamored with the power of words, how language can simultaneously be a confining cage and the means to break free, tools with which one can build all the knowledge in the universe or pen a verse to communicate the ineffable.
@@ -37,7 +37,7 @@ Here’s the quote in full:
 >Eventually, all things merge into one, and a river runs through it. The river was cut by the world’s great flood and runs over rocks from the basement of time. On some of the rocks are timeless raindrops. Under the rocks are the words, and some of the words are theirs.
 I am haunted by waters.”
 
-<br/><br/>
+<br><br>
 ### …on a mote of dust suspended in a sunbeam.”
 
 As the Voyager I spacecraft approached the edge of our solar system in 1989, it opened its lens back towards home and took a picture of earth across the emptiness. The resulting image was named Pale Blue Dot. You can see the earth as a small blue-white pixel in the middle of the brightest beam. This is the farthest picture we have of us, the most perspective, the widest angle, 3.7 billion miles away. The quote is from Carl Sagan, who was the impetus behind the picture being taken and wrote a book by the same name.
@@ -55,7 +55,7 @@ Ed Mitchell was an Apollo 14 astronaut who walked on the surface of the moon. He
 
 Amen.
 
-<br/><br/>
+<br><br>
 ### Though passion may have strained, it must not break our bonds of affection. The mystic chords of memory will swell when again touched, as surely they will be, by the better angels of our nature.
 
 These are the closing lines of the film American History X. The words are adapted from Lincoln’s First Inaugural Address given on the eve of the Civil War.
@@ -68,7 +68,7 @@ So much as happened since then, from Treyvon Martin to George Floyd and all the 
 
 But I still must hope for peace, for transcendence. I don’t know what that looks like exactly, but it must be there, somewhere in the future of the human, somewhere above us from where we will gaze down on the smallness surrounding us now and be able to trace all the little differences that added up to revealing, finally, the better angels of our nature.
 
-<br/><br/>
+<br><br>
 ### You are a god, and never have I heard anything more divine.
 
 In aphorism 341 of _The Gay Science_, Nietzsche introduces his notion of the eternal return. This often gets misconstrued as an actual ontological claim, but Nietzsche isn't positing a theory about how the afterlife works; he's giving us some perspective:
@@ -80,7 +80,7 @@ This moment is the most precious that exists for the simple reason that it is th
 
 Nietzsche's work is so often occluded [by his Nazi sister](https://en.wikipedia.org/wiki/Elisabeth_F%C3%B6rster-Nietzsche). To me, this one aphorism encapsulates his thought better than any other. Throw off the moralism and guilt of original sin, grasp this moment with both hands and see that is good. This full accounting and acceptance of ourselves and the power of self-creation and actualization that this acceptance brings, this is the true hope and aspiration of humanity. The _&Uuml;bermensch_ resides in each of us, in this tremendous moment, waiting to be realized, to be released!
 
-<br/><br/>
+<br><br>
 ### But let there be spaces in your togetherness. And let the winds of heaven dance between you.
 
 I think I first heard these words from _The Prophet_ by Kahlil Gibran at a friend's wedding in Tallahassee. It was at a Unitarian Universalist church, and I remember that it was the first time I agreed with an entire sermon in years. The pastor laughed when I told her.
@@ -93,8 +93,11 @@ This one is difficult to summarize in a short little post like this since it bas
 >Even as the strings of a lute are alone<br>
 >though the quiver with the same music. 
 
-This feels so human, so _real_, to me. When Agata and I were dating, we read a book called _A Severe Mercy_ about a young non-religious couple, Sheldon and Davy, who become Christian together, but then she dies of cancer and he must put the pieces of his life and faith back together. I didn't identify much with the book except for the second chapter, "The Shining Barrier." The Sheldon and Davy decide to erect a "shining barrier" between them and the world, a barrier made from the strength of their love,  
+This feels so human, so _real_, to me. When Agata and I were dating, we read a memoir called _A Severe Mercy_ about a young non-religious couple, Sheldon and Davy, who become Christian together, but then she dies of cancer and he must put the pieces of his life and faith back together. I didn't identify much with the book except for the second chapter, "The Shining Barrier." The Sheldon and Davy decide to erect a "shining barrier" between them and what they called "creeping separateness", a barrier made to protect their love through a kind of radical sharing. They feared losing their "inloveness", ceasing to do things together, and finding separate interests. Each must learn to like the things the other likes, "in the name of sharing."
 
->For the pillars of the temple stand apart,</br>
->And the oak tree and the cypress grow </br>
+Even writing those words now seems strange to me, but at the time when we were young and in love, this all resonated with us. Perhaps due to my turn to atheism, or our marriage now having been aged for 10 years, or even due to a slow self-actualization that simmered in the background all these years, the Shining Barrier feels like it was meant to confine rather than protect. 
+
+The paradox of marriage is beautiful, a trinitarian duality, one equals two which equal one, but the two are as necessary as the one. My marriage with Agata has grown into something truly extraordinary, and (not "but") we are each our own. The solution to creeping separateness isn't an erasure of all space between, but a celebration of each other's alterity, the very separateness that makes us other. As the passage concludes,
+>For the pillars of the temple stand apart,<br>
+>And the oak tree and the cypress grow <br>
 >not in each other's shadow.
