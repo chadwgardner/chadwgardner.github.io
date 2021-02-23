@@ -101,3 +101,8 @@ The paradox of marriage is beautiful, a trinitarian duality, one equals two whic
 >For the pillars of the temple stand apart,<br>
 >And the oak tree and the cypress grow <br>
 >not in each other's shadow.
+
+<br><br>
+### The nature of rain is the same, but it makes thorns grow in the marshes and flowers in the gardens.
+
+
