@@ -1,26 +1,86 @@
-I received an email the other day from Google. My domain name will be renewed in 30 days.
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>One Year Later</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../../../w3.css">
+<link rel="stylesheet" href="../../../main.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+</style>
+<script src=""></script>
 
-<em>What?!</em>
+<body class="w3-light-grey w3-serif">
+  <div class="w3-bar w3-border w3-black">
+    <a href="../../../index.html" class="w3-bar-item w3-button">cwg</a>
+    <a href="#" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white">Posts</a>
+    <a href="#" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white">Portfolio</a>
+    <a href="#" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white">Book Reviews</a>
+    <a href="#" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white">Resources</a>
+    <a href="#" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white">Contact</a>
+  </div>
 
-I checked the date: October 15th. That's when I realized it had been a year. I was registered to take the November 2017 LSAT and had to request my refund by around this time last year. It's been one year since I decided to try and become a data scientist.
+  <!-- w3-content defines a container for fixed size centered content, 
+      and is wrapped around the whole page content, except for the footer in this example -->
+  <div class="w3-content wrapper" style="max-width:800px">
+    <header class="w3-container w3-center w3-padding">
+      <h1><b>One Year Later</b></h1>
+      <p>Oct 15, 2018</p>
+    </header>
+    <div class="w3-card-4 w3-margin w3-padding w3-white">
+      <div class="w3-container w3-justify w3-margin">
+        I received an email the other day from Google. My domain name will be renewed in 30 days.
 
-I've fallen away from this blog over the last few months, but I have good reason: I got a job! I am currently working as a data analyst on the data warehouse team at <a href="http://www.adtheorent.com" target="_blank" rel="noopener">AdTheorent</a>&nbsp;(a quick note to say that this blog remains my own work, and is unaffiliated with my role there). I started applying to jobs more to test the waters of the local job market here in Jacksonville, FL. I wanted to see what employers were looking for and get some experience interviewing for tech jobs. I got a couple of interviews, but the AdTheorent one stuck out to me. AdTheorent is entirely based in the cloud, uses data science and predictive analytics to place bids on ad exchanges, and it seemed the team leader was looking less for someone with a certain skillset and more for someone who had the ability to think analytically and critically. I was offered the job and jumped at the chance.
+        <p><i>What?!</i></p>
+        
+        <p>I checked the date: October 15th. That's when I realized it had been a year. I was registered to take the November 2017 LSAT and had to request my refund by around this time last year. It's been one year since I decided to try and become a data scientist.</p>
+        
+        <p>I've fallen away from this blog over the last few months, but I have good reason: I got a job! I am currently working as a data analyst on the data warehouse team at <a href="http://www.adtheorent.com" target="_blank" rel="noopener">AdTheorent</a>&nbsp;(a quick note to say that this blog remains my own work, and is unaffiliated with my role there). I started applying to jobs more to test the waters of the local job market here in Jacksonville, FL. I wanted to see what employers were looking for and get some experience interviewing for tech jobs. I got a couple of interviews, but the AdTheorent one stuck out to me. AdTheorent is entirely based in the cloud, uses data science and predictive analytics to place bids on ad exchanges, and it seemed the team leader was looking less for someone with a certain skill set and more for someone who had the ability to think analytically and critically. I was offered the job and jumped at the chance.</p>
+        
+        <p>I'm not doing any data science for my job (we do have a data science team, but they're based in New York). However, I am using quite a bit of what I learned at <a href="http://www.datacamp.com" target="_blank" rel="noopener">DataCamp</a>. The majority of my life at AdTheorent is lived in SQL and some C# for our data loading and processing jobs. I still use Python and Seaborn for visualization when needed, and I'm starting to delve into Pyspark as well. Oh and Git. Lots of Git. Which bring me to the point of this post:</p>
 
-I'm not doing any data science for my job (we do have a data science team, but they're based in New York). However, I am using quite a bit of what I learned at <a href="http://www.datacamp.com" target="_blank" rel="noopener">DataCamp</a>. The majority of my life at AdTheorent is lived in SQL and some C# for our data loading and processing jobs. I still use Python and Seaborn for visualization when needed, and I'm starting to delve into Pyspark as well. Oh and Git. Lots of Git. Which bring me to the point of this post:
-<h2>Five Things I wish I had known</h2>
-1. Git
-I dipped into DataCamp's Git course, but I didn't pay very close attention. Now it's my bread and butter. I always have Git bash open, but too often I've had to ask our resident Git guru for help. I love using it now (seriously--it's a <em>brilliant</em> piece of software), but I wish I had learned it better beforehand. Maybe I would have a few less&nbsp;<em>git reverts</em> under my belt (or worse, I even had to check out a commit, rename it to master, and delete the old master...this is probably not standard practice...).
+        <h4>Five Things I wish I had known</h4>
+        <p>1. Git</p>
+        <p>I dipped into DataCamp's Git course, but I didn't pay very close attention. Now it's my bread and butter. I always have Git bash open, but too often I've had to ask our resident Git guru for help. I love using it now (seriously--it's a <i>brilliant</i> piece of software), but I wish I had learned it better beforehand. Maybe I would have a few less&nbsp;<i>git reverts</i> under my belt (or worse, I even had to check out a commit, rename it to master, and delete the old master...this is probably not standard practice...).</p>
+        
+        <p>2. Dev - UAT - Production</p>
+        <p>I'm not sure how I would have gained much experience here before actually being employed, but the actual day-to-day life of the software developer has been entirely new to me. We use an Agile workflow which I was basically Googling on day one (lots of small, frequent, and therefore flexible deployments instead of fewer, larger ones). Also, I had never written any code which had to pass a test other than, "Hey it worked this time!" Going from little home projects to working on production code was a huge jump, and I have definitely skinned my knees a time or two, which brings me to...</p>
+        
+        <p>3. The difference between big data, and BIG DATA</p>
+        <p>We process and house a lot of data. We aren't a Google or a Facebook, but we deal with tables that are terabytes. The Kaggle contest that I participated in dealt with enough data to make my MacBook run for cover, but that was just a couple of gigabytes. For anyone else starting out in all of this, just in case this isn't as obvious to you as it wasn't for me, methods, programs, and procedures that work with a gigabyte of data will not necessarily work with petabytes. I have had to go back to almost the drawing board twice now for a single project because, when it came to time to test on full, production-sized tables, my jobs crashed and burned (or at least were taking too long to be workable solutions). Often, when you get to this scale, the name of the game becomes less about how sexy you can make your solution and more about how reliable and quickly debuggable it is.</p>
+        
+        <p>4. Environments</p>
+        <p>I wish I had been familiar with the ways to set up and manage development environments. I didn't really know what they were or why they were important (if you want to learn this, use Anaconda and <a href="https://conda.io/docs/user-guide/tasks/manage-environments.html" target="_blank" rel="noopener">this documentation</a>). I mean, why didn't everyone just use the most recent version of all their packages? Well, also figured out some of this the hard way (sensing a pattern?).&nbsp; I finally managed to set up a cloned environment on my laptop of our Spark cluster--Python 2.7, Hadoop, and all.</p>
+        
+        <p>5. Network &amp; Server Speak</p>
+        <p>My house was the main gathering place for LAN parties in high school. We played Counter Strike, the Command and Conquer series, Starcraft, Quake 3, and other classics. We would sometimes spend hours troubleshooting, trying to get all the computers on the network (this was Windows 2000 and XP people...it was rough). I think our record was 24 computers up and running. We had to run extensions cords all over the house to keep from flipping the breakers (writing this now, I am reminded about how gracious my parents were...). Nonetheless, these experiences did not prepare me for network, VPN, server, production, UAT, cluster, box, prod talk (can you believe it?). I'm not sure how I would have learned all of this outside of a technology workplace, but I'm googling away trying to catch up.</p>
+        
+        <p>Now, despite my trial by fire, I feel like none of these things have been impossible hurdles. I'm picking things up and enjoying every minute. Now that I've settled into things, I hope to start back up on my data science education. Stay tuned!</p>
+        <p><span class="w3-tag">Data Science</span></p>
+      </div>
+    </div>
+  </div>
 
-2. Dev - UAT - Production
-I'm not sure how I would have gained much experience here before actually being employed, but the actual day-to-day life of the software developer has been entirely new to me. We use an Agile workflow which I was basically Googling on day one (lots of small, frequent, and therefore flexible deployments instead of fewer, larger ones). Also, I had never written any code which had to pass a test other than, "Hey it worked this time!" Going from little home projects to working on production code was a huge jump, and I have definitely skinned my knees a time or two, which brings me to...
+  <!-- Footer -->
+  <footer class="w3-container w3-dark-grey w3-margin-top">
+    <div class="w3-row">
+      <div class="w3-col m6 l6">
+        <p>Thanks to <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a> for their CSS
+          tutorials and templates.</p>
+      </div>
+      <div class="w3-col m6 l6">
+        <div class="w3-container w3-right-align">
+          <a href="https://github.com/chadwgardner/" class="w3-bar-item w3-button w3-xlarge"><i
+              class="fa fa-github"></i></a>
+          <a href="https://www.twitter.com/cwgardner" class="w3-bar-item w3-button w3-xlarge"><i
+              class="fa fa-twitter"></i></a>
+          <a href="https://www.linkedin.com/in/chadwgardner/" class="w3-bar-item w3-button w3-xlarge"><i
+              class="fa fa-linkedin"></i></a>
 
-3. The difference between big data, and BIG DATA
-We process and house a lot of data. We aren't a Google or a Facebook, but we deal with tables that are terabytes. The Kaggle contest that I participated in dealt with enough data to make my MacBook run for cover, but that was just a couple of gigabytes. For anyone else starting out in all of this, just in case this isn't as obvious to you as it wasn't for me, methods, programs, and procedures that work with a gigabyte of data will not necessarily work with petabytes. I have had to go back to almost the drawing board twice now for a single project because, when it came to time to test on full, production-sized tables, my jobs crashed and burned (or at least were taking too long to be workable solutions). Often, when you get to this scale, the name of the game becomes less about how sexy you can make your solution and more about how reliable and quickly debuggable it is.
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
 
-4. Environments
-I wish I had been familiar with the ways to set up and manage development environments. I didn't really know what they were or why they were important (if you want to learn this, use Anaconda and <a href="https://conda.io/docs/user-guide/tasks/manage-environments.html" target="_blank" rel="noopener">this documentation</a>). I mean, why didn't everyone just use the most recent version of all their packages? Well, also figured out some of this the hard way (sensing a pattern?).&nbsp; I finally managed to set up a cloned environment on my laptop of our Spark cluster--Python 2.7, Hadoop, and all.
-
-5. Network &amp; Server Speak
-My house was the main gathering place for LAN parties in high school. We played Counter Strike, the Command and Conquer series, Starcraft, Quake 3, and other classics. We would sometimes spend hours troubleshooting, trying to get all the computers on the network (this was Windows 2000 and XP people...it was rough). I think our record was 24 computers up and running. We had to run extensions cords all over the house to keep from flipping the breakers (writing this now, I am reminded about how gracious my parents were...). Nonetheless, these experiences did not prepare me for network, VPN, server, production, UAT, cluster, box, prod talk (can you believe it?). I'm not sure how I would have learned all of this outside of a technology workplace, but I'm googling away trying to catch up.
-
-Now, despite my trial by fire, I feel like none of these things have been impossible hurdles. I'm picking things up and enjoying every minute. Now that I've settled into things, I hope to start back up on my data science education. Stay tuned!
+</html>
