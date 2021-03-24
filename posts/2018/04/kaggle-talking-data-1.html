@@ -1,28 +1,87 @@
-At long last, I decided to enter my first Kaggle contest. For the uninitiated, <a href="http://www.kaggle.com" target="_blank" rel="noopener">Kaggle</a>&nbsp;hosts predictive, data science competitions. For example, Zillow recently had a contest on Kaggle to better improve their pricing algorithm. Prizes for the competitions can be pretty substantial (the Zillow prize pool was $1.2 million!).
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Post Title</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../../../w3.css">
+<link rel="stylesheet" href="../../../main.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+</style>
+<script src=""></script>
 
-As you can read about in <a href="http://chadwgardner.com/2018/02/27/kaggle-data-scientist-survey-2017/" target="_blank" rel="noopener">my analysis of their survey</a>, Kaggle is seen as a great resource for learning the tools of data science. I have something of a more mixed review.
+<body class="w3-light-grey w3-serif">
 
-About two weeks ago I entered the <a href="https://www.kaggle.com/c/talkingdata-adtracking-fraud-detection" target="_blank" rel="noopener">TalkingData AdTracking Fraud Detection Challenge</a>. According to the competition overview, TalkingData is&nbsp;China’s "largest independent big data service platform," and "covers over 70% of active mobile devices nationwide." The contest is to predict whether a person will download an app after clicking on an ad. They provide 200 million clicks over four days with which to train your model.
+  <body class="w3-light-grey w3-serif">
+    <div class="w3-bar w3-border w3-black">
+      <a href="../../../index.html" class="w3-bar-item w3-button">cwg</a>
+      <a href="../../../posts.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white w3-mobile">Posts</a>
+      <a href="../../../portfolio.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white w3-mobile">Portfolio</a>
+      <a href="../../../books.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white w3-mobile">Book Reviews</a>
+      <a href="../../../resources.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white w3-mobile">Resources</a>
+      <a href="../../../contact.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white w3-mobile">Contact</a>
+    </div>
 
-That last bit is what makes this competition challenging. The csv file for the training data is over 7.5 gigs (that is A LOT of commas)! Now, this is no BigData, but it's enough to make my little MacBook with a paltry 16 gigs of RAM cough and sputter a bit. What's more, out of all those 200 million clicks, only 0.2% result in a download. This results in a very unbalanced data set, which brings its own challenges.
+    <!-- w3-content defines a container for fixed size centered content, 
+      and is wrapped around the whole page content, except for the footer in this example -->
+    <div class="w3-content wrapper" style="max-width:800px">
+      <header class="w3-container w3-center w3-padding">
+        <h1><b>My First Kaggle Contest - Part 1</b></h1>
+        <p><span class="w3-tag">Data Science</span></p>
+        <p>April, 2018</p>
+      </header>
+      <div class="w3-card-4 w3-margin w3-padding w3-white">
+        <div class="w3-container w3-justify w3-margin">
+          <p>At long last, I decided to enter my first Kaggle contest. For the uninitiated, <a href="http://www.kaggle.com" target="_blank" rel="noopener">Kaggle</a> hosts predictive, data science competitions. For example, Zillow recently had a contest on Kaggle to better improve their pricing algorithm. Prizes for the competitions can be pretty substantial (the Zillow prize pool was $1.2 million!).</p>
 
-The competition has been something of a trial-by-fire. I had to learn the Kaggle platform, how to deal with the most raw data I've seen yet, and I had to become familiar with packages like XGBoost and Light GBM. The competition results uses the area-under-the -curve of an ROC plot (more on this in an upcoming post). Roughly, it's a measurement of how accurate your prediction is, taking into account false negative and false positive predictions. A score of 1 is perfect. My current best is sitting at 0.9633. Pretty good right? Ha, wrong! My rank on the leaderboard is 1,244th out of 2196. The current leader has a score of 0.9815. The competition is pretty fierce.
+          <p>As you can read about in <a href="../02/kaggle-survey.html" target="_blank" rel="noopener">my analysis of their survey</a>, Kaggle is seen as a great resource for learning the tools of data science. I have something of a more mixed review.</p>
+          <p>
+            About two weeks ago I entered the <a href="https://www.kaggle.com/c/talkingdata-adtracking-fraud-detection" target="_blank" rel="noopener">TalkingData AdTracking Fraud Detection Challenge</a>. According to the competition overview, TalkingData is China’s "largest independent big data service platform," and "covers over 70% of active mobile devices nationwide." The contest is to predict whether a person will download an app after clicking on an ad. They provide 200 million clicks over four days with which to train your model.
+          </p>
+          <p>That last bit is what makes this competition challenging. The csv file for the training data is over 7.5 gigs (that is A LOT of commas)! Now, this is no BigData, but it's enough to make my little MacBook with a paltry 16 gigs of RAM cough and sputter a bit. What's more, out of all those 200 million clicks, only 0.2% result in a download. This results in a very unbalanced data set, which brings its own challenges.</p>
 
-I'm not sure what everyone else is doing that I'm not. I've built several models from scratch and based on what others of posted, but I still can't get any higher. I have a few ideas left, and I'll you know how that goes. But here are some lessons I've learned so far:
-<h4>1. More and fancier features are not better.</h4>
-I spent a lot of time looking at the data, trying to figure out what might be important. Here's a screen shot of what it looks like:<img class="alignnone size-full wp-image-279" src="https://chadwgardner.files.wordpress.com/2018/04/screen-shot-2018-04-04-at-12-13-47-pm.png" alt="Screen Shot 2018-04-04 at 12.13.47 PM" width="686" height="235">
+          <p>The competition has been something of a trial-by-fire. I had to learn the Kaggle platform, how to deal with the most raw data I've seen yet, and I had to become familiar with packages like XGBoost and Light GBM. The competition results uses the area-under-the -curve of an ROC plot (more on this in an upcoming post). Roughly, it's a measurement of how accurate your prediction is, taking into account false negative and false positive predictions. A score of 1 is perfect. My current best is sitting at 0.9633. Pretty good right? Ha, wrong! My rank on the leaderboard is 1,244th out of 2196. The current leader has a score of 0.9815. The competition is pretty fierce.</p>
 
-One of the reasons I chose this competition is the limited number of features (columns). The first five are encoded, meaning that TalkingData knows what they mean by them, but to us they are just categories (i.e. maybe device 1 is an iPhone, maybe app 3 is Chrome). Overall there are just 6 features, with the "is_attributed" column telling us if they downloaded the app or not. There are really only a few new features you can create here. I looked at the total counts for ip, app, os, and channel, and I looked at the mean difference in click_time, thinking that if the clicks are fraudulent, they will happen faster than if a person is doing the clicking. I also included the hour of the day.
+          <p>I'm not sure what everyone else is doing that I'm not. I've built several models from scratch and based on what others of posted, but I still can't get any higher. I have a few ideas left, and I'll you know how that goes. But here are some lessons I've learned so far:</p>
 
-But I think this is overboard. As you can learn from reading my <a href="http://chadwgardner.com/2018/02/06/fitting-the-noise/" target="_blank" rel="noopener">post on overfitting</a>, more features can lead to a low-bias, high-variance model, i.e. I think I've overfit the training data, so my model does not generalize well to the test data. I'm considering dialing back some of these features to err on the side of simplicity.
-<h4>2. <a href="https://www.ironsidegroup.com/2016/01/11/recipes-predictive-modeling-highly-imbalanced-data/" target="_blank" rel="noopener">Here are some good tips</a> for dealing with unbalanced data. I'm currently working on implementing some of these ideas into my latest model.</h4>
-<h4>3. Kaggle can be a time suck.</h4>
-I&nbsp;<em>definitely</em> have spent too much time on this. I've learned a lot, yes, but I also spent a week trying to turn my old desktop into a CUDA-powered GPU machine. I got Ubuntu and all my packages installed just fine, but I wanted to go one step further and use the GPU on my old NVIDIA Geforce 760. I tried for hours and hours. No luck. I keep running into problems with the display driver. And this was all in an effort to be able to model faster to get my score higher. That last bit's the rub. Maybe it's more of a personal character flaw, but I wasn't satisfied with just learning cool new tools...I wanted to be in the top 10% at least. I definitely feel that I've neglected my other studies (and probably my kids a bit too). I need to learn to budget my Kaggle time better. Maybe I should walk away with my knowledge and not worry as much about my rank...
-<h4>4. The Kaggle community is pretty great.</h4>
-I'm super impressed with the help that people offer each other. The discussions are interesting and useful, and so many people post kernels from which you can build your own. They have 16 gigs of RAM at your disposal if you use their servers (i.e. you don't have to have any languages or packages installed on your computer. You can do it all through your browser!). I look forward to doing more competitions, and to using other platforms like <a href="https://www.drivendata.org/" target="_blank" rel="noopener">DrivenData</a>&nbsp;where competitions are for non-profits.
+          <h4>1. More and fancier features are not better.</h4>
+          <p>I spent a lot of time looking at the data, trying to figure out what might be important. Here's a screen shot of what it looks like:</p>
+          <img src="../../../lib/screen-shot-2018-04-04-at-12-13-47-pm.png" alt="Screen Shot 2018-04-04 at 12.13.47 PM">
 
-That's all for now. More coming in part 2!
+          <p>One of the reasons I chose this competition is the limited number of features (columns). The first five are encoded, meaning that TalkingData knows what they mean by them, but to us they are just categories (i.e. maybe device 1 is an iPhone, maybe app 3 is Chrome). Overall there are just 6 features, with the "is_attributed" column telling us if they downloaded the app or not. There are really only a few new features you can create here. I looked at the total counts for ip, app, os, and channel, and I looked at the mean difference in click_time, thinking that if the clicks are fraudulent, they will happen faster than if a person is doing the clicking. I also included the hour of the day.</p>
 
-&nbsp;
+          <p>But I think this is overboard. As you can learn from reading my <a href="../02/fitting-the-noise.html" target="_blank" rel="noopener">post on over-fitting</a>, more features can lead to a low-bias, high-variance model, i.e. I think I've over-fit the training data, so my model does not generalize well to the test data. I'm considering dialing back some of these features to err on the side of simplicity.</p>
 
-&nbsp;
+          <h4>2. <a href="https://www.ironsidegroup.com/2016/01/11/recipes-predictive-modeling-highly-imbalanced-data/" target="_blank" rel="noopener">Here are some good tips</a> for dealing with unbalanced data. I'm currently working on implementing some of these ideas into my latest model.</h4>
+          <h4>3. Kaggle can be a time suck.</h4>
+          <p>I <em>definitely</em> have spent too much time on this. I've learned a lot, yes, but I also spent a week trying to turn my old desktop into a CUDA-powered GPU machine. I got Ubuntu and all my packages installed just fine, but I wanted to go one step further and use the GPU on my old NVIDIA Geforce 760. I tried for hours and hours. No luck. I keep running into problems with the display driver. And this was all in an effort to be able to model faster to get my score higher. That last bit's the rub. Maybe it's more of a personal character flaw, but I wasn't satisfied with just learning cool new tools...I wanted to be in the top 10% at least. I definitely feel that I've neglected my other studies (and probably my kids a bit too). I need to learn to budget my Kaggle time better. Maybe I should walk away with my knowledge and not worry as much about my rank...</p>
+
+          <h4>4. The Kaggle community is pretty great.</h4>
+
+          <p>I'm super impressed with the help that people offer each other. The discussions are interesting and useful, and so many people post kernels from which you can build your own. They have 16 gigs of RAM at your disposal if you use their servers (i.e. you don't have to have any languages or packages installed on your computer. You can do it all through your browser!). I look forward to doing more competitions, and to using other platforms like <a href="https://www.drivendata.org/" target="_blank" rel="noopener">DrivenData</a> where competitions are for non-profits.</p>
+
+          <p>That's all for now. More coming in <a href="../05/kaggle-talking-data-2.html"> part 2</a>!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-container w3-dark-grey w3-margin-top">
+      <div class="w3-row">
+        <div class="w3-col m6 l6">
+          <p>Thanks to <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a> for their CSS
+            tutorials and templates.</p>
+        </div>
+        <div class="w3-col m6 l6">
+          <div class="w3-container w3-right-align">
+            <a href="https://github.com/chadwgardner/" class="w3-bar-item w3-button w3-xlarge"><i class="fa fa-github"></i></a>
+            <a href="https://www.twitter.com/cwgardner" class="w3-bar-item w3-button w3-xlarge"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/chadwgardner/" class="w3-bar-item w3-button w3-xlarge"><i class="fa fa-linkedin"></i></a>
+
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+
+</html>

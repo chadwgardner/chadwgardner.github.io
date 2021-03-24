@@ -1,61 +1,130 @@
-I'm still not in a place to really produce some original, quality analysis of my own yet, so I thought I'd teach you all about what is probably the most common pitfall in data science: overfitting.
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Fitting the Noise</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../../../w3.css">
+<link rel="stylesheet" href="../../../main.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+</style>
+<script src=""></script>
 
-In very broad strokes, machine learning consists of splitting your data set into two chunks: a training set and a test set. Then you take whatever model you are attempting to use, whether it's linear regression, k-nearest-neighbors, or a random forest, etc., and "train" it on the training set. This involves tuning the hyperparameters that minimize whichever error function you're using. In other words, when you train your model, you are taking your function and finding a way to best fit it to the training data. Finally, you take that trained model and see how well it performs on the test data. This type of machine learning is called supervised machine learning, because we know the answers in our test set, and can therefore measure how well our model performs directly.
+<body class="w3-light-grey w3-serif">
 
-Several interesting themes emerge when attempting to fit models to data like this. Allow me to illustrate with a somewhat lengthy example (credit goes to <a href="https://talyarkoni.org/downloads/ML_Meetup_Yarkoni_Overfitting.pdf">this talk</a> from Dr.&nbsp;Tal Yarkoni at the Machine Learning Meetup in Austin for the overall structure of this example. However, the code which underlies it this analysis is my own).
+  <body class="w3-light-grey w3-serif">
+    <div class="w3-bar w3-border w3-black">
+      <a href="../../../index.html" class="w3-bar-item w3-button">cwg</a>
+      <a href="../../../posts.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white w3-mobile">Posts</a>
+      <a href="../../../portfolio.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white w3-mobile">Portfolio</a>
+      <a href="../../../books.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white w3-mobile">Book Reviews</a>
+      <a href="../../../resources.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white w3-mobile">Resources</a>
+      <a href="../../../contact.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white w3-mobile">Contact</a>
+    </div>
 
-Here's some data:
+    <!-- w3-content defines a container for fixed size centered content, 
+      and is wrapped around the whole page content, except for the footer in this example -->
+    <div class="w3-content wrapper" style="max-width:800px">
+      <header class="w3-container w3-center w3-padding">
+        <h1><b>Fitting the Noise</b></h1>
+        <p><span class="w3-tag">Data Science</span></p>
+        <p>Feb 2018</p>
+      </header>
+      <div class="w3-card-4 w3-margin w3-padding w3-white">
+        <div class="w3-container w3-justify w3-margin">
+          <p>I'm still not in a place to really produce some original, quality analysis of my own yet, so I thought I'd teach you all about what is probably the most common pitfall in data science: over-fitting.</p>
 
-<img class="aligncenter size-full wp-image-95" src="https://chadwgardner.files.wordpress.com/2018/02/data1.png" alt="data" width="515" height="389">
+          <p>
+            In very broad strokes, machine learning consists of splitting your data set into two chunks: a training set and a test set. Then you take whatever model you are attempting to use, whether it's linear regression, k-nearest-neighbors, or a random forest, etc., and "train" it on the training set. This involves tuning the hyperparameters that minimize whichever error function you're using. In other words, when you train your model, you are taking your function and finding a way to best fit it to the training data. Finally, you take that trained model and see how well it performs on the test data. This type of machine learning is called supervised machine learning, because we know the answers in our test set, and can therefore measure how well our model performs directly.
 
-I created a simple quadratic function and added some normally distributed noise. Our goal is to find a polynomial that best fits this data. First, we randomly pick out 60% of our data on which to train, leaving 40% used to test our model. I mainly chose these proportions for illustrative purposes:
+          </p>
+          <p>Several interesting themes emerge when attempting to fit models to data like this. Allow me to illustrate with a somewhat lengthy example (credit goes to <a href="https://talyarkoni.org/downloads/ML_Meetup_Yarkoni_Overfitting.pdf">this talk</a> from Dr.&nbsp;Tal Yarkoni at the Machine Learning Meetup in Austin for the overall structure of this example. However, the code which underlies it this analysis is my own).</p>
 
-<img class=" size-full wp-image-99 aligncenter" src="https://chadwgardner.files.wordpress.com/2018/02/train_test1.png" alt="train_test" width="984" height="484">
+          <p>Here's some data:</p>
+          <div class="w3-center">
+            <img src="../../../lib/data1.png" alt="data">
+          </div>
 
-With the naked eye we can detect an overall upward trend, perhaps with a little bump at the front (your brain is pretty good at finding patterns). Lets try a linear fit (i.e. a first degree polynomial):
+          <p>I created a simple quadratic function and added some normally distributed noise. Our goal is to find a polynomial that best fits this data. First, we randomly pick out 60% of our data on which to train, leaving 40% used to test our model. I mainly chose these proportions for illustrative purposes:</p>
 
-<img class=" size-full wp-image-97 aligncenter" src="https://chadwgardner.files.wordpress.com/2018/02/1d.png" alt="1d" width="872" height="455">
+          <div class="w3-center">
+            <img src="../../../lib/train_test1.png" alt="train_test" style="width: 100%;">
+          </div>
 
-On the left in blue, we see the training points along with the best fit line of our model. Overall, our model doesn't really capture the overall trend of our data. We call a model like this <em>underfit.&nbsp;</em>The program is using <a href="https://en.wikipedia.org/wiki/Least_squares" target="_blank" rel="noopener">least squares</a> regression, trying to minimize the sum of the squares of the residuals (a residual is the difference between what the model predicts and the actual value of the data—we use the square so a positive residual is not canceled out by an equal but negative one). On the right, we see the test data, the same linear model, and, plotted in red, the actual function I used to create the data. Notice the MSE value on each graph. MSE stands for the mean squared error and is a calculation of the average of the squares of the residuals. <strong>The gist is this: the closer to zero we can get the MSE, the better our model.</strong> There are many and better ways to measure the success of models, but for our purposes here the MSE will suffice. Let's try a quadratic function (2nd degree polynomial) and see if our MSE decreases.
+          <p>With the naked eye we can detect an overall upward trend, perhaps with a little bump at the front (your brain is pretty good at finding patterns). Lets try a linear fit (i.e. a first degree polynomial):</p>
 
-<img class=" size-full wp-image-100 aligncenter" src="https://chadwgardner.files.wordpress.com/2018/02/2d.png" alt="2d" width="872" height="455">
+          <div class="w3-center">
+            <img src="../../../lib/1d.png" alt="1d" style="width: 100%;">
+          </div>
 
-Pretty good! Notice how close to our target function we get, despite the noise I added (I imagine that normally distributed noise with a small standard deviation averages out in this situation). Our MSE for both our training data and our test data are a lot lower than our linear fit. We should expect this, since the actual function I used is a 2nd degree function. This model actually captures the underlying structure of the data. Often we don't have the luxury of knowing this, but we're learning here, so it's okay.
+          <p>On the left in blue, we see the training points along with the best fit line of our model. Overall, our model doesn't really capture the overall trend of our data. We call a model like this <em>underfit.&nbsp;</em>The program is using <a href="https://en.wikipedia.org/wiki/Least_squares" target="_blank" rel="noopener">least squares</a> regression, trying to minimize the sum of the squares of the residuals (a residual is the difference between what the model predicts and the actual value of the data—we use the square so a positive residual is not canceled out by an equal but negative one). On the right, we see the test data, the same linear model, and, plotted in red, the actual function I used to create the data. Notice the MSE value on each graph. MSE stands for the mean squared error and is a calculation of the average of the squares of the residuals. <strong>The gist is this: the closer to zero we can get the MSE, the better our model.</strong> There are many and better ways to measure the success of models, but for our purposes here the MSE will suffice. Let's try a quadratic function (2nd degree polynomial) and see if our MSE decreases.</p>
+          <div class="w3-center">
+            <img src="../../../lib/2d.png" alt="2d" style="width: 100%;">
+          </div>
+          <p>Pretty good! Notice how close to our target function we get, despite the noise I added (I imagine that normally distributed noise with a small standard deviation averages out in this situation). Our MSE for both our training data and our test data are a lot lower than our linear fit. We should expect this, since the actual function I used is a 2nd degree function. This model actually captures the underlying structure of the data. Often we don't have the luxury of knowing this, but we're learning here, so it's okay.</p>
 
-Now, lets make our model more complicated, really trying to fit the training data with a 10th degree polynomial:
+          <p>Now, lets make our model more complicated, really trying to fit the training data with a 10th degree polynomial:</p>
+          <div class="w3-center">
+            <img src="../../../lib/10d.png" alt="10d" style="width: 100%;">
+          </div>
 
-<img class=" size-full wp-image-101 aligncenter" src="https://chadwgardner.files.wordpress.com/2018/02/10d.png" alt="10d" width="872" height="455">
+          <p>Aha! Something interesting has happened. Notice how the MSE on our training data is&nbsp;<em>better</em> than our 2nd degree fit. The 10 degrees of freedom allow the model to squiggle up and down, getting close to all the little bumps and dips in our training data. But look what happens when we test our model: the MSE is&nbsp;<em>greater</em> than our 2nd degree fit! Here, at last, is the impetus behind the title of this post: we have no longer fit the underlying structure of the data—we have fit the noise instead.</p>
 
-Aha! Something interesting has happened. Notice how the MSE on our training data is&nbsp;<em>better</em> than our 2nd degree fit. The 10 degrees of freedom allow the model to squiggle up and down, getting close to all the little bumps and dips in our training data. But look what happens when we test our model: the MSE is&nbsp;<em>greater</em> than our 2nd degree fit! Here, at last, is the impetus behind the title of this post: we have no longer fit the underlying structure of the data—we have fit the noise instead.
+          <p>The terms signal and noise come from electrical engineering: the signal is the goal, the underlying "truth" of the matter, while the noise is all the extra bits of randomness from various sources. For an accessible introduction to all of this, I highly recommend Nate Silver's&nbsp;<em><a href="https://www.amazon.com/Signal-Noise-Many-Predictions-Fail-but/dp/0143125087" target="_blank" rel="noopener">The Signal and the Noise: Why So Many Predictions Fail—but Some Don't</a></em>. When we test our model against data it has never seen, it fails because the model was built to satisfy the idiosyncrasies of our training set. Thus, when it encounters the idiosyncrasies of our&nbsp;<em>testing</em> set, it misses its target. The model is&nbsp;<em>overfit</em>.</p>
 
-The terms signal and noise come from electrical engineering: the signal is the goal, the underlying "truth" of the matter, while the noise is all the extra bits of randomness from various sources. For an accessible introduction to all of this, I highly recommend Nate Silver's&nbsp;<em><a href="https://www.amazon.com/Signal-Noise-Many-Predictions-Fail-but/dp/0143125087" target="_blank" rel="noopener">The Signal and the Noise: Why So Many Predictions Fail—but Some Don't</a></em>. When we test our model against data it has never seen, it fails because the model was built to satisfy the idiosyncrasies of our training set. Thus, when it encounters the idiosyncrasies of our&nbsp;<em>testing</em> set, it misses its target. The model is&nbsp;<em>overfit</em>.
+          <p>In the real world, we don't really&nbsp;<em>know</em> the underlying structure of the data. So how can we guard against overfitting? How do we know if we are fitting the noise or if we are beginning to capture the underlying signal? One way to check ourselves is to run multiple "experiments." Keeping our overall dataset the same, we can randomly choose&nbsp;<em>different&nbsp;</em>training and test sets, creating models and tests for each one. Let's do this and plot all of the fits as well as the average fit:</p>
 
-In the real world, we don't really&nbsp;<em>know</em> the underlying structure of the data. So how can we guard against overfitting? How do we know if we are fitting the noise or if we are beginning to capture the underlying signal? One way to check ourselves is to run multiple "experiments." Keeping our overall dataset the same, we can randomly choose&nbsp;<em>different&nbsp;</em>training and test sets, creating models and tests for each one. Let's do this and plot all of the fits as well as the average fit:
+          <div class="w3-center">
+            <img src="../../../lib/bootstrapped.png" alt="bootstrapped" style="width: 100%;">
+          </div>
+          <p>Each of the 100 fits I ran is plotted as a faint, blue line, while the mean fit is plotted with the dark line. We can learn a lot from these graphs. First, notice that the first two graphs don't change much. Each model, no matter which 60% of the points we sample, turns out about the same. But take a look at the 10 degree fit: it's much more wild, sometimes up, others down, bumps here one time, not there the next. This is a nice illustration of&nbsp;<em>variance.&nbsp;</em>The first two models have a low variance: the same point doesn't change a whole lot from model to model. The 10 degree fit has a high variance, with a single point having a much wider range of movement.</p>
 
-<img class=" size-full wp-image-102 aligncenter" src="https://chadwgardner.files.wordpress.com/2018/02/bootstrapped.png" alt="bootstrapped" width="1784" height="584">
+          <p>I gathered all of the error data for each of these fits:</p>
+          <div class="w3-center">
+            <img src="../../../lib/mse_hists.png" alt="mse_hists">
+            <img src="../../../lib/boxplots_mse.png" alt="boxplots_mse">
+          </div>
 
-Each of the 100 fits I ran is plotted as a faint, blue line, while the mean fit is plotted with the dark line. We can learn a lot from these graphs. First, notice that the first two graphs don't change much. Each model, no matter which 60% of the points we sample, turns out about the same. But take a look at the 10 degree fit: it's much more wild, sometimes up, others down, bumps here one time, not there the next. This is a nice illustration of&nbsp;<em>variance.&nbsp;</em>The first two models have a low variance: the same point doesn't change a whole lot from model to model. The 10 degree fit has a high variance, with a single point having a much wider range of movement.
+          <p>Here we can see the accuracy and the variance. Notice the tall peaks in the histogram for the one and two dimensional models. The errors are all clustered pretty close together (i.e. each model isn't changing too much from iteration to iteration). This is especially noticeable in the boxplot of the two dimensional fit. The colored area represent the central 50% of the measurements, also known as the inter-quartile range or IQR. Notice how narrow it is compared to the other two models.</p>
 
-I gathered all of the error data for each of these fits:
+          <p>Directly related to the problem of under/overfitting your data is the <a href="https://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff" target="_blank" rel="noopener">bias-variance trade off</a>. In a nutshell, bias can be defined as error introduced to your prediction due to assumptions made about the structure of the underlying data. In our case, models with a lower degree have a higher bias. The 10 degree polynomial has more degrees of freedom, so it is less constrained with respect to the shapes of trends it can model, whereas the linear and quadratic cases can only model straight lines and parabolas, respectively.&nbsp;<em>However, </em>combining this with what we've already said about the variance of each of models, we see there is a trade off. Models can generally have high bias and low variance, or they can have a low bias and a high variance. Often, the job of a data scientist is to find the sweet spot in the middle. Like this:</p>
+          <div class="w3-center">
+            <img src="../../../lib/bias_variance1.png" alt="bias_variance">
+          </div>
+          <p>I have to say I'm proud of this little graph (it was the culmination of four days of coding in between being a dad). I modeled the same 100 training and test sets shown above with every degree of polynomial from 0 to 10, keeping track of the errors along the way. The result is this graph. The average fit is shown with the dark lines. You can see that the blue training line steadily gets closer to zero as we increase the degree of the polynomial. In other words, the more degrees of freedom we give our model (low bias), the better it can fit the training data (and actually, if we have 60 degrees of freedom, it would have a training MSE of exactly zero, since it could produce a function that goes exactly through each of the 60 training points).</p>
 
-<img class=" size-full wp-image-104 aligncenter" src="https://chadwgardner.files.wordpress.com/2018/02/mse_hists.png" alt="mse_hists" width="560" height="430"><img class=" size-full wp-image-103 aligncenter" src="https://chadwgardner.files.wordpress.com/2018/02/boxplots_mse.png" alt="boxplots_mse" width="568" height="431">
+          <p>However, as we run those models on the testing data, they get substantially&nbsp;<em>worse</em> as our degree increases (the red line). This increased error is due to having fit the noise of the training data. Since this noise changes with each set, each model varies wildly. We have decreased the bias of our underlying assumption at the expense of greater variance and unpredictability. What we are after is the lowest error along that red line: surprise, surprise, a degree of two! Data scientists use a similar technique to tune their models and discover the underlying trends in their data.</p>
 
-Here we can see the accuracy and the variance. Notice the tall peaks in the histogram for the one and two dimensional models. The errors are all clustered pretty close together (i.e. each model isn't changing too much from iteration to iteration). This is especially noticeable in the boxplot of the two dimensional fit. The colored area represent the central 50% of the measurements, also known as the inter-quartile range or IQR. Notice how narrow it is compared to the other two models.
+          <p>As hinted at above, real world cases are not this cut and dry. The models are much more complicated with many more variables and features involved. Often, the scientist has very little information about the underlying structure, and sometimes the model's accuracy won't be known until more data is captured. But overfitting—fitting the noise over the signal—is a problem with which every data scientist must contend on a daily basis. And now you know why!</p>
 
-Directly related to the problem of under/overfitting your data is the <a href="https://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff" target="_blank" rel="noopener">bias-variance trade off</a>. In a nutshell, bias can be defined as error introduced to your prediction due to assumptions made about the structure of the underlying data. In our case, models with a lower degree have a higher bias. The 10 degree polynomial has more degrees of freedom, so it is less constrained with respect to the shapes of trends it can model, whereas the linear and quadratic cases can only model straight lines and parabolas, respectively.&nbsp;<em>However, </em>combining this with what we've already said about the variance of each of models, we see there is a trade off. Models can generally have high bias and low variance, or they can have a low bias and a high variance. Often, the job of a data scientist is to find the sweet spot in the middle. Like this:
+          <p><b>For all your fellow Python lovers and data heads (or just for the curious), check out the complete code for this post on <a href="https://github.com/chadwgardner/fitting/blob/master/fitting.py" target="_blank" rel="noopener">my GitHub page</a>! I'd love your feedback.</b></p>
 
-<img class=" size-full wp-image-106 aligncenter" src="https://chadwgardner.files.wordpress.com/2018/02/bias_variance1.png" alt="bias_variance" width="581" height="435">
+          &nbsp;
+          <h3>Afterward</h3>
+          <p>While thinking about and writing this post, I was struck by its use as an analogy for many of our society's problems. We have evolved to find the patterns around us: this seemingly causing that, event A always following event B, etc. Our brain's pattern-finding behavior was a distinct evolutionary advantage and probably primarily responsible for our rise to dominant species on the planet. But it can also lead us astray: we stereotype and let those stereotypes invade our social systems to the deepest levels; we tend to think tomorrow will be like today and have a difficulty imagining long time spans, leading to doubts about climate change and the like; we let the few speak for the many, with so many of our squabbles revolving around which few get to speak for which many. I can see how these are all like the problem of overfitting: we use too few data points to generalize to the world around us. Keep an eye on your models of the world friends! Don't be afraid to let a little more data into your brain!</p>
 
-I have to say I'm proud of this little graph (it was the culmination of four days of coding in between being a dad). I modeled the same 100 training and test sets shown above with every degree of polynomial from 0 to 10, keeping track of the errors along the way. The result is this graph. The average fit is shown with the dark lines. You can see that the blue training line steadily gets closer to zero as we increase the degree of the polynomial. In other words, the more degrees of freedom we give our model (low bias), the better it can fit the training data (and actually, if we have 60 degrees of freedom, it would have a training MSE of exactly zero, since it could produce a function that goes exactly through each of the 60 training points).
+          :o)
+        </div>
+      </div>
+    </div>
 
-However, as we run those models on the testing data, they get substantially&nbsp;<em>worse</em> as our degree increases (the red line). This increased error is due to having fit the noise of the training data. Since this noise changes with each set, each model varies wildly. We have decreased the bias of our underlying assumption at the expense of greater variance and unpredictability. What we are after is the lowest error along that red line: surprise, surprise, a degree of two! Data scientists use a similar technique to tune their models and discover the underlying trends in their data.
+    <!-- Footer -->
+    <footer class="w3-container w3-dark-grey w3-margin-top">
+      <div class="w3-row">
+        <div class="w3-col m6 l6">
+          <p>Thanks to <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a> for their CSS
+            tutorials and templates.</p>
+        </div>
+        <div class="w3-col m6 l6">
+          <div class="w3-container w3-right-align">
+            <a href="https://github.com/chadwgardner/" class="w3-bar-item w3-button w3-xlarge"><i class="fa fa-github"></i></a>
+            <a href="https://www.twitter.com/cwgardner" class="w3-bar-item w3-button w3-xlarge"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/chadwgardner/" class="w3-bar-item w3-button w3-xlarge"><i class="fa fa-linkedin"></i></a>
 
-As hinted at above, real world cases are not this cut and dry. The models are much more complicated with many more variables and features involved. Often, the scientist has very little information about the underlying structure, and sometimes the model's accuracy won't be known until more data is captured. But overfitting—fitting the noise over the signal—is a problem with which every data scientist must contend on a daily basis. And now you know why!
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 
-***For all your fellow Python lovers and data heads (or just for the curious), check out the complete code for this post on <a href="https://github.com/chadwgardner/fitting/blob/master/fitting.py" target="_blank" rel="noopener">my GitHub page</a>! I'd love your feedback.***
-
-&nbsp;
-<h3>Afterward</h3>
-While thinking about and writing this post, I was struck by its use as an analogy for many of our society's problems. We have evolved to find the patterns around us: this seemingly causing that, event A always following event B, etc. Our brain's pattern-finding behavior was a distinct evolutionary advantage and probably primarily responsible for our rise to dominant species on the planet. But it can also lead us astray: we stereotype and let those stereotypes invade our social systems to the deepest levels; we tend to think tomorrow will be like today and have a difficulty imagining long time spans, leading to doubts about climate change and the like; we let the few speak for the many, with so many of our squabbles revolving around which few get to speak for which many. I can see how these are all like the problem of overfitting: we use too few data points to generalize to the world around us. Keep an eye on your models of the world friends! Don't be afraid to let a little more data into your brain!
-
-:o)
+</html>
