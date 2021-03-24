@@ -1,39 +1,119 @@
-I have had a difficult time figuring out when to stop learning and to start trying to work on something of my own. I feel a pretty strong urge to make something original. I downloaded years of data from the Florida Department of Education, but that whole thing seemed so daunting. Also, I don't feel like I know enough yet to really discover anything. I can make some graphs and do some exploratory data analysis, but I haven't dived very deep into the statistical thinking or machine learning required to really find insights.
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>A Random Walk</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../../../w3.css">
+<link rel="stylesheet" href="../../../main.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+</style>
+<script src=""></script>
 
-So here is a little tidbit to go along with my own path which has brought me here: a random walk.
+<body class="w3-light-grey w3-serif">
 
-[caption id="attachment_56" align="aligncenter" width="300"]<img class="alignnone size-medium wp-image-56" src="https://chadwgardner.files.wordpress.com/2017/12/1_1000.png?w=300" alt="1_1000" width="300" height="300"> 1 walk, 1000 steps[/caption]
+  <body class="w3-light-grey w3-serif">
+    <div class="w3-bar w3-border w3-black">
+      <a href="../../../index.html" class="w3-bar-item w3-button">cwg</a>
+      <a href="../../../posts.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white w3-mobile">Posts</a>
+      <a href="../../../portfolio.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white w3-mobile">Portfolio</a>
+      <a href="../../../books.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white w3-mobile">Book Reviews</a>
+      <a href="../../../resources.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white w3-mobile">Resources</a>
+      <a href="../../../contact.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white w3-mobile">Contact</a>
+    </div>
 
-From a starting point, in this case the origin, randomly take a step either forward, backward, to the right, or to left. The probability of each choice is the same. And repeat. The image above shows a random walk with one thousand steps. I generated it with some Python code using a visualization package called Bokeh. You can find the code on <a href="https://github.com/chadwgardner/random_walk_rep/blob/master/random_walk.py" target="_blank" rel="noopener">my Githup page</a>.
+    <!-- w3-content defines a container for fixed size centered content, 
+      and is wrapped around the whole page content, except for the footer in this example -->
+    <div class="w3-content wrapper" style="max-width:800px">
+      <header class="w3-container w3-center w3-padding">
+        <h1><b>Post Title</b></h1>
+        <p><span class="w3-tag">Data Science</span></p>
+        <p>Dec 2017</p>
+      </header>
+      <div class="w3-card-4 w3-margin w3-padding w3-white">
+        <div class="w3-container w3-justify w3-margin">
+          <p>I have had a difficult time figuring out when to stop learning and to start trying to work on something of my own. I feel a pretty strong urge to make something original. I downloaded years of data from the Florida Department of Education, but that whole thing seemed so daunting. Also, I don't feel like I know enough yet to really discover anything. I can make some graphs and do some exploratory data analysis, but I haven't dived very deep into the statistical thinking or machine learning required to really find insights.</p>
 
-Random walks are a common feature in nature. A photon released from a fusion explosion in the center of the sun can take over a million years to reach the sun's surface as it is absorbed and reemitted in a random direction by billions of hydrogen atoms. Once freed from its walk, the photon reaches earth only eight and a half minutes later. <a href="https://en.wikipedia.org/wiki/Brownian_motion" target="_blank" rel="noopener">Brownian motion</a>, described by Einstein in one of his "miracle year" papers of 1905, can also be modeled as a random walk.
+          <p>So here is a little tidbit to go along with my own path which has brought me here: a random walk.</p>
 
-I decided to explore random walks with Bokeh because the package can create interactive visualizations. I got it all working on my home machine, but I haven't figured out how to host them on this site. So for now, instead of creating your own walks, you must find satisfaction in this gallery of randomly colored random walks. I made the lines semi-transparent so you can see the overlap. Once I get the interactive version working online, I'll update this post (it lets you slide through the walk and watch the whole thing unfold. Very cool!).
 
-[caption id="attachment_57" align="aligncenter" width="500"]<img class="alignnone size-full wp-image-57" src="https://chadwgardner.files.wordpress.com/2017/12/100_100.png" alt="100_100" width="500" height="500"> 100 walks, 100 steps each[/caption]
+          <div class="w3-center w3-small"> <img src="../../../lib/1_1000.png" style="width: 80%;">
+            <p>1 walk, 1000 steps</p>
+          </div>
 
-[caption id="attachment_63" align="aligncenter" width="500"]<img class="alignnone size-full wp-image-63" src="https://chadwgardner.files.wordpress.com/2017/12/100_1000.png" alt="100_1000" width="500" height="500"> 100 walks, 1000 steps each[/caption]
+          <p>From a starting point, in this case the origin, randomly take a step either forward, backward, to the right, or to left. The probability of each choice is the same. And repeat. The image above shows a random walk with one thousand steps. I generated it with some Python code using a visualization package called Bokeh. You can find the code on <a href="https://github.com/chadwgardner/random_walk_rep/blob/master/random_walk.py" target="_blank" rel="noopener">my Githup page</a>.</p>
 
-[caption id="attachment_59" align="aligncenter" width="500"]<img class="alignnone size-full wp-image-59" src="https://chadwgardner.files.wordpress.com/2017/12/100_2000.png" alt="100_2000" width="500" height="500"> 100 walks, 2000 steps each[/caption]
+          <p>Random walks are a common feature in nature. A photon released from a fusion explosion in the center of the sun can take over a million years to reach the sun's surface as it is absorbed and reemitted in a random direction by billions of hydrogen atoms. Once freed from its walk, the photon reaches earth only eight and a half minutes later. <a href="https://en.wikipedia.org/wiki/Brownian_motion" target="_blank" rel="noopener">Brownian motion</a>, described by Einstein in one of his "miracle year" papers of 1905, can also be modeled as a random walk.</p>
 
-[caption id="attachment_58" align="aligncenter" width="500"]<img class="alignnone size-full wp-image-58" src="https://chadwgardner.files.wordpress.com/2017/12/100_2000-_zoom.png" alt="100_2000 _zoom" width="500" height="500"> detail of 100 walks, 2000 steps[/caption]
+          <p>I decided to explore random walks with Bokeh because the package can create interactive visualizations. I got it all working on my home machine, but I haven't figured out how to host them on this site. So for now, instead of creating your own walks, you must find satisfaction in this gallery of randomly colored random walks. I made the lines semi-transparent so you can see the overlap. Once I get the interactive version working online, I'll update this post (it lets you slide through the walk and watch the whole thing unfold. Very cool!).</p>
 
-[caption id="attachment_60" align="aligncenter" width="500"]<img class="alignnone size-full wp-image-60" src="https://chadwgardner.files.wordpress.com/2017/12/100_10000.png" alt="100_10000" width="500" height="500"> 100 walks, 10,000 steps each[/caption]
+          <div class="w3-center w3-small">
+            <img src="../../../lib/100_100.png" style="width: 80%;">
+            <p>100 walks, 100 steps each</p>
+          </div>
+          <div class="w3-center w3-small">
+            <img src="../../../lib/100_1000.png" style="width: 80%;">
+            <p>100 walks, 1000 steps each</p>
+          </div>
+          <div class="w3-center w3-small">
+            <img src="../../../lib/100_2000.png" style="width: 80%;">
+            <p>100 walks, 2000 steps each</p>
+          </div>
+          <div class="w3-center w3-small">
+            <img src=" ../../../lib/100_2000-_zoom.png" alt="100_2000 _zoom" style="width: 80%;">
+            <p>detail of 100 walks, 2000 steps</p>
+          </div>
+          <div class="w3-center w3-small">
+            <img src=" ../../../lib/100_10000.png" alt="100_10000" style="width: 80%;">
+            <p>100 walks, 10,000 steps each</p>
+          </div>
+          <div class="w3-center w3-small">
+            <img src=" ../../../lib/1000_2000.png" alt="1000_2000" style="width: 80%;">
+            <p>1,000 walks, 2,000 steps eachs</p>
+          </div>
+          <div class="w3-center w3-small">
+            <img src=" ../../../lib/1000_10000.png" alt="1000_10000" style="width: 80%;">
+            <p> 1,000 walks, 10,000 steps each</p>
+          </div>
 
-[caption id="attachment_61" align="aligncenter" width="500"]<img class="alignnone size-full wp-image-61" src="https://chadwgardner.files.wordpress.com/2017/12/1000_2000.png" alt="1000_2000" width="500" height="500"> 1,000 walks, 2,000 steps eachs[/caption]
+          <p>I <a href="https://github.com/chadwgardner/random_walk_rep/blob/master/walk_analysis.py" target="_blank" rel="noopener">did some simple analysis</a> of the distribution of the final distances traveled by the walks. Since each walk beings at the origin, the straight-line distance it has traveled is just found with your favorite equation from algebra: a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup>. I ran 10,000 walks with 100 steps each. Here are the results:</p>
+          <div class="w3-center w3-small">
+            <img src=" ../../../lib/hist1.png" alt="hist" style="width: 100%;">
+            <p> Normalized Histogram of the distances to the origin</p>
+          </div>
+          <div class="w3-center w3-small">
+            <img src=" ../../../lib/ecdf1.png" alt="ecdf" style="width: 100%;">
+            <p>Cumulative Distribution Function</p>
+          </div>
+          <p>In blue are the empirical results and in green is a normal distribution with identical mean and standard deviation. At first, I though the heavy counts to left of the mean might be noise, but after running the simulations several times, the distribution continued to be skewed the same way. The distances are not normally distributed! You have a little better chance of being closer to the origin than the average distance traveled. Your chances of being on the low side of the mean are better than being on the high side of the mean.</p>
 
-[caption id="attachment_62" align="aligncenter" width="500"]<img class="alignnone size-full wp-image-62" src="https://chadwgardner.files.wordpress.com/2017/12/1000_10000.png" alt="1000_10000" width="500" height="500"> 1,000 walks, 10,000 steps each[/caption]
+          <p>Perhaps that makes sense: to get far from the origin, your steps overall need to be in the same direction (or at least 2 of the same directions, e.g. if you keep going up and to the right). This is less likely than having a roughly equal number of steps in each direction. Maybe I can do some further analysis and count the steps each walk takes and see where that leads me.</p>
 
-I <a href="https://github.com/chadwgardner/random_walk_rep/blob/master/walk_analysis.py" target="_blank" rel="noopener">did some simple analysis</a> of the distribution of the final distances traveled by the walks. Since each walk beings at the origin, the straight-line distance it has traveled is just found with your favorite equation from algebra: a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup>. I ran 10,000 walks with 100 steps each. Here are the results:
+          <p>I'm sure that this is all well documented in the analytic literature, but it has been fun running through it on my own. Currently, I'm working through some of the stats courses on <a href="https://www.datacamp.com/" target="_blank" rel="noopener">DataCamp</a>, after which comes the machine learning stuff. Hopefully I'll have more tools at my disposal soon to actually dive into some real data.</p>
 
-[caption id="attachment_71" align="alignnone" width="640"]<img class="alignnone size-full wp-image-71" src="https://chadwgardner.files.wordpress.com/2017/12/hist1.png" alt="hist" width="640" height="480"> Normalized Histogram of the distances to the origin[/caption]
+          <p>Until then!</p>
+          <p>[Note from the future, the above analysis is wrong, but I don't remember what the solution was. It was some bug in the way I ran everything. I meant to go back and update this post, but I apparently never did...] </p>
+        </div>
+      </div>
+    </div>
 
-[caption id="attachment_70" align="alignnone" width="1440"]<img class="alignnone size-full wp-image-70" src="https://chadwgardner.files.wordpress.com/2017/12/ecdf1.png" alt="ecdf" width="1440" height="765"> Cumulative Distribution Function[/caption]
+    <!-- Footer -->
+    <footer class="w3-container w3-dark-grey w3-margin-top">
+      <div class="w3-row">
+        <div class="w3-col m6 l6">
+          <p>Thanks to <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a> for their CSS
+            tutorials and templates.</p>
+        </div>
+        <div class="w3-col m6 l6">
+          <div class="w3-container w3-right-align">
+            <a href="https://github.com/chadwgardner/" class="w3-bar-item w3-button w3-xlarge"><i class="fa fa-github"></i></a>
+            <a href="https://www.twitter.com/cwgardner" class="w3-bar-item w3-button w3-xlarge"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/chadwgardner/" class="w3-bar-item w3-button w3-xlarge"><i class="fa fa-linkedin"></i></a>
 
-In blue are the empirical results and in green is a normal distribution with identical mean and standard deviation. At first, I though the heavy counts to left of the mean might be noise, but after running the simulations several times, the distribution continued to be skewed the same way. The distances are not normally distributed! You have a little better chance of being closer to the origin than the average distance traveled. Your chances of being on the low side of the mean are better than being on the high side of the mean.
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 
-Perhaps that makes sense: to get far from the origin, your steps overall need to be in the same direction (or at least 2 of the same directions, e.g. if you keep going up and to the right). This is less likely than having a roughly equal number of steps in each direction. Maybe I can do some further analysis and count the steps each walk takes and see where that leads me.
-
-I'm sure that this is all well documented in the analytic literature, but it has been fun running through it on my own. Currently, I'm working through some of the stats courses on <a href="https://www.datacamp.com/" target="_blank" rel="noopener">DataCamp</a>, after which comes the machine learning stuff. Hopefully I'll have more tools at my disposal soon to actually dive into some real data.
-
-Until then!
+</html>
