@@ -11,9 +11,9 @@
 <script src=""></script>
 
 <body class="w3-light-grey w3-serif">
-  <body class="w3-light-grey w3-serif">
+  <div class="w3-light-grey w3-serif">
     <div class="w3-bar w3-border w3-black">
-       <a href="../../../index.html" class="w3-bar-item w3-button w3-mobile">cwg</a>
+      <a href="../../../index.html" class="w3-bar-item w3-button w3-mobile">cwg</a>
       <a href="../../../posts.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white w3-mobile">Posts</a>
       <a href="../../../portfolio.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white w3-mobile">Portfolio</a>
       <a href="../../../books.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white w3-mobile">Book Reviews</a>
@@ -21,46 +21,49 @@
       <a href="../../../contact.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white w3-mobile">Contact</a>
     </div>
 
-  <!-- w3-content defines a container for fixed size centered content, 
+    <!-- w3-content defines a container for fixed size centered content, 
       and is wrapped around the whole page content, except for the footer in this example -->
-  <div class="w3-content wrapper" style="max-width:800px">
-    <header class="w3-container w3-center w3-padding">
-      <h1><b>My First Kaggle Contest - Part 2</b></h1>
-      <span class="w3-tag">Data Science</span>
-      <p>May, 2018</p>
-    </header>
-    <div class="w3-card-4 w3-padding w3-white">
-      <div class="w3-container  w3-margin">
-        <p>So it's finally over! I can come out of the Kaggle hole in which I've been hiding for the last month or so. It's been quite a little ride.&nbsp;<a href="https://chadwgardner.com/2018/04/04/my-first-kaggle-contest-part-1/" target="_blank" rel="noopener">When we left off</a>, I was struggling to engineer some new features and&nbsp; was looking at ways to deal with the size of the data set, such as using an Easy Ensemble (which failed miserably). Since then, I had several little breakthroughs.</p>
+    <div class="w3-content wrapper" style="max-width:800px">
+      <header class="w3-container w3-center w3-padding">
+        <h1><b>My First Kaggle Contest - Part 2</b></h1>
+        <span class="w3-tag">Data Science</span>
+        <p>May, 2018</p>
+      </header>
+      <div class="w3-card-4 w3-padding w3-white">
+        <div class="w3-container  w3-margin">
+          <p>So it's finally over! I can come out of the Kaggle hole in which I've been hiding for the last month or so. It's been quite a little ride.&nbsp;<a href="https://chadwgardner.com/2018/04/04/my-first-kaggle-contest-part-1/" target="_blank" rel="noopener">When we left off</a>, I was struggling to engineer some new features and&nbsp; was looking at ways to deal with the size of the data set, such as using an Easy Ensemble (which failed miserably). Since then, I had several little breakthroughs.</p>
 
-        <p>First, I started using a much better validation method. This let me really gauge whether the features I was adding and the model parameters I was using were adding to my model's success or causing it to overfit the training data.</p>
-        
-        <p>Second, I spent a lot of time reading the forums and realized I was missing a key piece of information. TalkingData had accidentally released a larger test set early on, and were now providing it to everyone so nobody had an unfair advantage. I needed to incorporate this larger set when calculating my features on the test set since many of my features involved counting clicks over certain groupings and measuring the time between clicks. Without the full picture, my calculations had been off.</p>
-        
-        <p>Third, due to the way TalkingData set up the encoded features, it made sense to create my features on a daily basis rather than for the entire set altogether (i.e. the group counts, etc. would reset each day. See the chart below.)</p>
-        
-       <img class="alignnone size-full wp-image-295" src="../../../lib/screen-shot-2018-05-11-at-9-51-05-am.png" alt="Screen Shot 2018-05-11 at 9.51.05 AM" width="629" height="487">
-       <p><div class="w3-center w3-small">One of the charts I made to demonstrate how the day affected model validation.</div></p>
-        
-        So not too long after my last post, armed with the above changes, I jumped up to 17th out of about 3000 teams! What!? Huge!
-        
-        <p>Partially, I think I got a little lucky. I feel like I was thinking through things, but using only my 14 features and getting an AUC score of .9805 seems pretty magical, especially when others were using fancier computers and more features only to be stuck in the high .9700s. But I'll take a little magic I guess!</p>
-        
-        <p>My relatively simple and high performing model caught the attention of another team, and they reached out to me. We had fairly different approaches, and their score was pretty close to mine, so we joined forces, hoping that combining our models would prove effective. The story from here is rather long. In a nutshell, we spent a lot of time writing a separate report that we sent directly to TalkingData explaining why we thought the competition setup was a bit flawed. Submissions were evaluated based on the AUC score of predictions about whether the app was downloaded, but the competition was billed as fraud detection. We discovered machines that were obviously fraudulent clickers but which still downloaded the app.</p>
-        
-        <p>In the meantime, other teams continued to improve their models and our position on the leaderboard dropped. We adjusted our model to its final form, and we were in a good place to finish in the top 4% or so, a fairly satisfactory place for a first time contestant. But, alas, 8 hours before the end of a three-month-long competition, a user posted a kernel which provided a score of .9811. So all of the copy-and-paste aficionados leap frogged us, and we fell down to 12%. I ended up pretty disappointed in how the competition ended.</p>
-        
-        <p>But, I learned a lot along the way. Here are my takeaways:</p>
-        
-        <p>The daily work involved in doing well in a Kaggle contest is&nbsp;<em>not</em> the same work a data scientist or analyst does. The models created by data scientists are deployed at scale, so efficiency must be carefully weighted against accuracy, as accuracy often comes from complexity, and complexity comes at the cost of speed. For Kaggle, the&nbsp;<em>only</em> factor that matters is accuracy. In a Kaggle contest, spending hours and hours getting your metric to increase by 0.0005 is time very well spent. This is not the case in the real world. Kaggle can be great fun, and a great learning experience, but the competitions should be approached the same way an RPG should be. Do you want to spend 250 hours leveling up from level 75 to 76? Yeah? Great! Go ahead. But if you're more interested in just learning the ropes, maybe try to get into the top 25% and move on.</p>
-        
-        <p>While the Kaggle community is great about sharing and teaching, this ends up being a double-edged sword. I definitely got a lot of help at the beginning through the discussions and the kernels. I would comb through the forums looking for new ideas if I got stuck on my end. But I'm not sure that the ability to run a full kernel and get the exact submission from someone else is beneficial to the community, and I definitely feel it's a detriment to the competition. The forums should be a place for exploratory data analysis, code snippets, etc, but not for sharing complete solutions to the problem. So much of my and my teammates hard work was undone at the last second from one person posting a kernel (and all those competitors who took advantage of it). If somebody's Kaggle rank is supposed to mean anything in the real world, copy-and-pasting your way to the top shouldn't be possible.</p>
-        
-        <p>I recently listened to <a href="https://www.datacamp.com/community/podcast/kaggle-future-data-science" target="_blank" rel="noopener">an episode of DataFramed</a>&nbsp;where <a href="https://twitter.com/hugobowne">Hugo Bowne-Anderson</a> interviews Anthony Goldbloom, the CEO of Kaggle. Goldbloom says that the competitions on Kaggle are only about a fourth of the activity on the site. Kaggle also offers dataset storage and sharing, and the kernels can be used to write, share,&nbsp; and run any code you want. Kaggle was recently acquired by Google, and will soon grant access to GPU (graphics processing unit) and TPU (tensor processing unit) machines. I know of no where else the public can have access to this kind of computing power for free. Deep learning with artificial neural networks is one of the areas on which I'd eventually like to focus, so I'm excited to see this feature launched.</p>
-        
-        <p>Overall, despite how it ended, I'm fairly satisfied with my first Kaggle competition experience. I got to try a nice handful of different algorithms and techniques on a real-world data set and have my results measured against others in the field. If you're an aspiring analyst or data scientist, but haven't dived into the world of Kaggle yet, then, to quote the immortal Ms. Frizzle: "Take chances, make mistakes, and&nbsp;<b>get messy</b>!"</p>
-        
-        <p>PS - <a href="https://www.datacamp.com" target="_blank" rel="noopener">DataCamp.com</a> has several tutorials on how to get started with Kaggle competitions. Check them out!</p>
+          <p>First, I started using a much better validation method. This let me really gauge whether the features I was adding and the model parameters I was using were adding to my model's success or causing it to overfit the training data.</p>
+
+          <p>Second, I spent a lot of time reading the forums and realized I was missing a key piece of information. TalkingData had accidentally released a larger test set early on, and were now providing it to everyone so nobody had an unfair advantage. I needed to incorporate this larger set when calculating my features on the test set since many of my features involved counting clicks over certain groupings and measuring the time between clicks. Without the full picture, my calculations had been off.</p>
+
+          <p>Third, due to the way TalkingData set up the encoded features, it made sense to create my features on a daily basis rather than for the entire set altogether (i.e. the group counts, etc. would reset each day. See the chart below.)</p>
+
+          <img class="alignnone size-full wp-image-295" src="../../../lib/screen-shot-2018-05-11-at-9-51-05-am.png" alt="Screen Shot 2018-05-11 at 9.51.05 AM" width="629" height="487">
+          <p>
+          <div class="w3-center w3-small">One of the charts I made to demonstrate how the day affected model validation.</div>
+          </p>
+
+          So not too long after my last post, armed with the above changes, I jumped up to 17th out of about 3000 teams! What!? Huge!
+
+          <p>Partially, I think I got a little lucky. I feel like I was thinking through things, but using only my 14 features and getting an AUC score of .9805 seems pretty magical, especially when others were using fancier computers and more features only to be stuck in the high .9700s. But I'll take a little magic I guess!</p>
+
+          <p>My relatively simple and high performing model caught the attention of another team, and they reached out to me. We had fairly different approaches, and their score was pretty close to mine, so we joined forces, hoping that combining our models would prove effective. The story from here is rather long. In a nutshell, we spent a lot of time writing a separate report that we sent directly to TalkingData explaining why we thought the competition setup was a bit flawed. Submissions were evaluated based on the AUC score of predictions about whether the app was downloaded, but the competition was billed as fraud detection. We discovered machines that were obviously fraudulent clickers but which still downloaded the app.</p>
+
+          <p>In the meantime, other teams continued to improve their models and our position on the leaderboard dropped. We adjusted our model to its final form, and we were in a good place to finish in the top 4% or so, a fairly satisfactory place for a first time contestant. But, alas, 8 hours before the end of a three-month-long competition, a user posted a kernel which provided a score of .9811. So all of the copy-and-paste aficionados leap frogged us, and we fell down to 12%. I ended up pretty disappointed in how the competition ended.</p>
+
+          <p>But, I learned a lot along the way. Here are my takeaways:</p>
+
+          <p>The daily work involved in doing well in a Kaggle contest is&nbsp;<em>not</em> the same work a data scientist or analyst does. The models created by data scientists are deployed at scale, so efficiency must be carefully weighted against accuracy, as accuracy often comes from complexity, and complexity comes at the cost of speed. For Kaggle, the&nbsp;<em>only</em> factor that matters is accuracy. In a Kaggle contest, spending hours and hours getting your metric to increase by 0.0005 is time very well spent. This is not the case in the real world. Kaggle can be great fun, and a great learning experience, but the competitions should be approached the same way an RPG should be. Do you want to spend 250 hours leveling up from level 75 to 76? Yeah? Great! Go ahead. But if you're more interested in just learning the ropes, maybe try to get into the top 25% and move on.</p>
+
+          <p>While the Kaggle community is great about sharing and teaching, this ends up being a double-edged sword. I definitely got a lot of help at the beginning through the discussions and the kernels. I would comb through the forums looking for new ideas if I got stuck on my end. But I'm not sure that the ability to run a full kernel and get the exact submission from someone else is beneficial to the community, and I definitely feel it's a detriment to the competition. The forums should be a place for exploratory data analysis, code snippets, etc, but not for sharing complete solutions to the problem. So much of my and my teammates hard work was undone at the last second from one person posting a kernel (and all those competitors who took advantage of it). If somebody's Kaggle rank is supposed to mean anything in the real world, copy-and-pasting your way to the top shouldn't be possible.</p>
+
+          <p>I recently listened to <a href="https://www.datacamp.com/community/podcast/kaggle-future-data-science" target="_blank" rel="noopener">an episode of DataFramed</a>&nbsp;where <a href="https://twitter.com/hugobowne">Hugo Bowne-Anderson</a> interviews Anthony Goldbloom, the CEO of Kaggle. Goldbloom says that the competitions on Kaggle are only about a fourth of the activity on the site. Kaggle also offers dataset storage and sharing, and the kernels can be used to write, share,&nbsp; and run any code you want. Kaggle was recently acquired by Google, and will soon grant access to GPU (graphics processing unit) and TPU (tensor processing unit) machines. I know of no where else the public can have access to this kind of computing power for free. Deep learning with artificial neural networks is one of the areas on which I'd eventually like to focus, so I'm excited to see this feature launched.</p>
+
+          <p>Overall, despite how it ended, I'm fairly satisfied with my first Kaggle competition experience. I got to try a nice handful of different algorithms and techniques on a real-world data set and have my results measured against others in the field. If you're an aspiring analyst or data scientist, but haven't dived into the world of Kaggle yet, then, to quote the immortal Ms. Frizzle: "Take chances, make mistakes, and&nbsp;<b>get messy</b>!"</p>
+
+          <p>PS - <a href="https://www.datacamp.com" target="_blank" rel="noopener">DataCamp.com</a> has several tutorials on how to get started with Kaggle competitions. Check them out!</p>
+        </div>
       </div>
     </div>
   </div>

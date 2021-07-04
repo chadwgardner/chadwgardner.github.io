@@ -1,19 +1,18 @@
 <div class="w3-card-4 w3-margin w3-white">
-    <img src="lib/winter-woods.jpg" alt="Winter Mountains" style="width:100%" class="w3-grayscale-max w3-opacity-min">
     <div class="w3-container">
-      <h3><b>{% post title %}</b></h3>
-      <h5>A Reflection <span class="w3-opacity">({% date %}})</span></h5>
+      <h3><b>{post title}</b></h3>
+      <h5><span class="w3-opacity">{date}</span></h5>
     </div>
 
     <div class="w3-container">
-      <p> I'm not sure how the hell you even start writing a reflection about 2020. This year seems to have crystallized the trope that time moves simultaneously too quickly and too slowly&mdash;twelve months having both passed by in a blur and happened so long ago that I can't hardly remember what was happening in the world. The Democratic primary was in full swing, Kobe Bryant and his daughter died in a helicopter crash, and Australia was on fire. China finally started talking about the virus that was about the change the world. Since, we lived on through the death of George Floyd, the protests that followed, and the election of Joe Biden.</p>
+      {content}
       <div class="row">
         <div class="w3-col m6 s12">
-          <p><span class="w3-tag">Reflection</span> <span class="w3-tag">Politics/Social Commentary</span></p>
+          <p><span class="w3-tag">{tag 1}</span> <span class="w3-tag">{tag 2}</span></p>
         </div>
         <div class="w3-col m6 s12">
           <div class="w3-container w3-right">
-            <p><a href="posts/2020/12/christmas-2020.html" class="w3-button w3-white w3-border"><b>Continue Reading...</b></a></p>
+            <p><a href="posts/{sub post dir}" class="w3-button w3-white w3-border"><b>Continue Reading...</b></a></p>
           </div>
         </div>
       </div>
