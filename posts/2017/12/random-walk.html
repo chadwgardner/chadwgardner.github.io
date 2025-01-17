@@ -3,8 +3,8 @@
 <meta charset="UTF-8">
 <title>A Random Walk</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="stylesheet" href="../../../w3.css">
-<link rel="stylesheet" href="../../../main.css">
+<link rel="stylesheet" href="/w3.css">
+<link rel="stylesheet" href="/main.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 <style>
 </style>
@@ -14,9 +14,9 @@
 
   <body class="w3-light-grey w3-serif">
     <div class="w3-bar w3-border w3-black">
-       <a href="../../../index.html" class="w3-bar-item w3-button w3-mobile">cwg</a>
-      <a href="../../../posts.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white w3-mobile">Posts</a>
-      <a href="../../../contact.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white w3-mobile">Contact</a>
+       <a href="/index.html" class="w3-bar-item w3-button w3-mobile">cwg</a>
+      <a href="/posts.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white w3-mobile">Posts</a>
+      <a href="/contact.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white w3-mobile">Contact</a>
     </div>
 
     <!-- w3-content defines a container for fixed size centered content, 
@@ -34,7 +34,7 @@
           <p>So here is a little tidbit to go along with my own path which has brought me here: a random walk.</p>
 
 
-          <div class="w3-center w3-small"> <img src="../../../lib/1_1000.png" style="width: 80%;">
+          <div class="w3-center w3-small"> <img src="/lib/1_1000.png" style="width: 80%;">
             <p>1 walk, 1000 steps</p>
           </div>
 
@@ -45,41 +45,41 @@
           <p>I decided to explore random walks with Bokeh because the package can create interactive visualizations. I got it all working on my home machine, but I haven't figured out how to host them on this site. So for now, instead of creating your own walks, you must find satisfaction in this gallery of randomly colored random walks. I made the lines semi-transparent so you can see the overlap. Once I get the interactive version working online, I'll update this post (it lets you slide through the walk and watch the whole thing unfold. Very cool!).</p>
 
           <div class="w3-center w3-small">
-            <img src="../../../lib/100_100.png" style="width: 80%;">
+            <img src="/lib/100_100.png" style="width: 80%;">
             <p>100 walks, 100 steps each</p>
           </div>
           <div class="w3-center w3-small">
-            <img src="../../../lib/100_1000.png" style="width: 80%;">
+            <img src="/lib/100_1000.png" style="width: 80%;">
             <p>100 walks, 1000 steps each</p>
           </div>
           <div class="w3-center w3-small">
-            <img src="../../../lib/100_2000.png" style="width: 80%;">
+            <img src="/lib/100_2000.png" style="width: 80%;">
             <p>100 walks, 2000 steps each</p>
           </div>
           <div class="w3-center w3-small">
-            <img src=" ../../../lib/100_2000-_zoom.png" alt="100_2000 _zoom" style="width: 80%;">
+            <img src=" /lib/100_2000-_zoom.png" alt="100_2000 _zoom" style="width: 80%;">
             <p>detail of 100 walks, 2000 steps</p>
           </div>
           <div class="w3-center w3-small">
-            <img src=" ../../../lib/100_10000.png" alt="100_10000" style="width: 80%;">
+            <img src=" /lib/100_10000.png" alt="100_10000" style="width: 80%;">
             <p>100 walks, 10,000 steps each</p>
           </div>
           <div class="w3-center w3-small">
-            <img src=" ../../../lib/1000_2000.png" alt="1000_2000" style="width: 80%;">
+            <img src=" /lib/1000_2000.png" alt="1000_2000" style="width: 80%;">
             <p>1,000 walks, 2,000 steps eachs</p>
           </div>
           <div class="w3-center w3-small">
-            <img src=" ../../../lib/1000_10000.png" alt="1000_10000" style="width: 80%;">
+            <img src=" /lib/1000_10000.png" alt="1000_10000" style="width: 80%;">
             <p> 1,000 walks, 10,000 steps each</p>
           </div>
 
           <p>I <a href="https://github.com/chadwgardner/random_walk_rep/blob/master/walk_analysis.py" target="_blank" rel="noopener">did some simple analysis</a> of the distribution of the final distances traveled by the walks. Since each walk beings at the origin, the straight-line distance it has traveled is just found with your favorite equation from algebra: a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup>. I ran 10,000 walks with 100 steps each. Here are the results:</p>
           <div class="w3-center w3-small">
-            <img src=" ../../../lib/hist1.png" alt="hist" style="width: 100%;">
+            <img src=" /lib/hist1.png" alt="hist" style="width: 100%;">
             <p> Normalized Histogram of the distances to the origin</p>
           </div>
           <div class="w3-center w3-small">
-            <img src=" ../../../lib/ecdf1.png" alt="ecdf" style="width: 100%;">
+            <img src=" /lib/ecdf1.png" alt="ecdf" style="width: 100%;">
             <p>Cumulative Distribution Function</p>
           </div>
           <p>In blue are the empirical results and in green is a normal distribution with identical mean and standard deviation. At first, I though the heavy counts to left of the mean might be noise, but after running the simulations several times, the distribution continued to be skewed the same way. The distances are not normally distributed! You have a little better chance of being closer to the origin than the average distance traveled. Your chances of being on the low side of the mean are better than being on the high side of the mean.</p>

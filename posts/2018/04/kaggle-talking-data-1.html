@@ -3,8 +3,8 @@
 <meta charset="UTF-8">
 <title>My First Kaggle Contest - 1</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="stylesheet" href="../../../w3.css">
-<link rel="stylesheet" href="../../../main.css">
+<link rel="stylesheet" href="/w3.css">
+<link rel="stylesheet" href="/main.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 <style>
 </style>
@@ -14,9 +14,9 @@
 
   <div class="w3-light-grey w3-serif">
     <div class="w3-bar w3-border w3-black">
-      <a href="../../../index.html" class="w3-bar-item w3-button w3-mobile">cwg</a>
-      <a href="../../../posts.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white w3-mobile">Posts</a>
-      <a href="../../../contact.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white w3-mobile">Contact</a>
+      <a href="/index.html" class="w3-bar-item w3-button w3-mobile">cwg</a>
+      <a href="/posts.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white w3-mobile">Posts</a>
+      <a href="/contact.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white w3-mobile">Contact</a>
     </div>
 
     <!-- w3-content defines a container for fixed size centered content, 
@@ -31,7 +31,7 @@
         <div class="w3-container  w3-margin">
           <p>At long last, I decided to enter my first Kaggle contest. For the uninitiated, <a href="https://www.kaggle.com" target="_blank" rel="noopener">Kaggle</a> hosts predictive, data science competitions. For example, Zillow recently had a contest on Kaggle to better improve their pricing algorithm. Prizes for the competitions can be pretty substantial (the Zillow prize pool was $1.2 million!).</p>
 
-          <p>As you can read about in <a href="../02/kaggle-survey.html" target="_blank" rel="noopener">my analysis of their survey</a>, Kaggle is seen as a great resource for learning the tools of data science. I have something of a more mixed review.</p>
+          <p>As you can read about in <a href="/posts/02/kaggle-survey.html" target="_blank" rel="noopener">my analysis of their survey</a>, Kaggle is seen as a great resource for learning the tools of data science. I have something of a more mixed review.</p>
           <p>
             About two weeks ago I entered the <a href="https://www.kaggle.com/c/talkingdata-adtracking-fraud-detection" target="_blank" rel="noopener">TalkingData AdTracking Fraud Detection Challenge</a>. According to the competition overview, TalkingData is China’s "largest independent big data service platform," and "covers over 70% of active mobile devices nationwide." The contest is to predict whether a person will download an app after clicking on an ad. They provide 200 million clicks over four days with which to train your model.
           </p>
@@ -43,11 +43,11 @@
 
           <h4>1. More and fancier features are not better.</h4>
           <p>I spent a lot of time looking at the data, trying to figure out what might be important. Here's a screen shot of what it looks like:</p>
-          <img src="../../../lib/screen-shot-2018-04-04-at-12-13-47-pm.png" alt="Screen Shot 2018-04-04 at 12.13.47 PM">
+          <img src="/lib/screen-shot-2018-04-04-at-12-13-47-pm.png" alt="Screen Shot 2018-04-04 at 12.13.47 PM">
 
           <p>One of the reasons I chose this competition is the limited number of features (columns). The first five are encoded, meaning that TalkingData knows what they mean by them, but to us they are just categories (i.e. maybe device 1 is an iPhone, maybe app 3 is Chrome). Overall there are just 6 features, with the "is_attributed" column telling us if they downloaded the app or not. There are really only a few new features you can create here. I looked at the total counts for ip, app, os, and channel, and I looked at the mean difference in click_time, thinking that if the clicks are fraudulent, they will happen faster than if a person is doing the clicking. I also included the hour of the day.</p>
 
-          <p>But I think this is overboard. As you can learn from reading my <a href="../02/fitting-the-noise.html" target="_blank" rel="noopener">post on over-fitting</a>, more features can lead to a low-bias, high-variance model, i.e. I think I've over-fit the training data, so my model does not generalize well to the test data. I'm considering dialing back some of these features to err on the side of simplicity.</p>
+          <p>But I think this is overboard. As you can learn from reading my <a href="/posts/02/fitting-the-noise.html" target="_blank" rel="noopener">post on over-fitting</a>, more features can lead to a low-bias, high-variance model, i.e. I think I've over-fit the training data, so my model does not generalize well to the test data. I'm considering dialing back some of these features to err on the side of simplicity.</p>
 
           <h4>2. <a href="https://www.ironsidegroup.com/2016/01/11/recipes-predictive-modeling-highly-imbalanced-data/" target="_blank" rel="noopener">Here are some good tips</a> for dealing with unbalanced data. I'm currently working on implementing some of these ideas into my latest model.</h4>
           <h4>3. Kaggle can be a time suck.</h4>
@@ -57,7 +57,7 @@
 
           <p>I'm super impressed with the help that people offer each other. The discussions are interesting and useful, and so many people post kernels from which you can build your own. They have 16 gigs of RAM at your disposal if you use their servers (i.e. you don't have to have any languages or packages installed on your computer. You can do it all through your browser!). I look forward to doing more competitions, and to using other platforms like <a href="https://www.drivendata.org/" target="_blank" rel="noopener">DrivenData</a> where competitions are for non-profits.</p>
 
-          <p>That's all for now. More coming in <a href="../05/kaggle-talking-data-2.html"> part 2</a>!</p>
+          <p>That's all for now. More coming in <a href="/posts/05/kaggle-talking-data-2.html"> part 2</a>!</p>
         </div>
       </div>
     </div>

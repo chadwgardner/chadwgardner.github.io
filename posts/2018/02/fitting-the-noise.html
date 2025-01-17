@@ -3,8 +3,8 @@
 <meta charset="UTF-8">
 <title>Fitting the Noise</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="stylesheet" href="../../../w3.css">
-<link rel="stylesheet" href="../../../main.css">
+<link rel="stylesheet" href="/w3.css">
+<link rel="stylesheet" href="/main.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 <style>
 </style>
@@ -14,9 +14,9 @@
 
   <body class="w3-light-grey w3-serif">
     <div class="w3-bar w3-border w3-black">
-       <a href="../../../index.html" class="w3-bar-item w3-button w3-mobile">cwg</a>
-      <a href="../../../posts.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white w3-mobile">Posts</a>
-      <a href="../../../contact.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white w3-mobile">Contact</a>
+       <a href="/index.html" class="w3-bar-item w3-button w3-mobile">cwg</a>
+      <a href="/posts.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white w3-mobile">Posts</a>
+      <a href="/contact.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white w3-mobile">Contact</a>
     </div>
 
     <!-- w3-content defines a container for fixed size centered content, 
@@ -39,30 +39,30 @@
 
           <p>Here's some data:</p>
           <div class="w3-center">
-            <img src="../../../lib/data1.png" alt="data" style="width: 100%;">
+            <img src="/lib/data1.png" alt="data" style="width: 100%;">
           </div>
 
           <p>I created a simple quadratic function and added some normally distributed noise. Our goal is to find a polynomial that best fits this data. First, we randomly pick out 60% of our data on which to train, leaving 40% used to test our model. I mainly chose these proportions for illustrative purposes:</p>
 
           <div class="w3-center">
-            <img src="../../../lib/train_test1.png" alt="train_test" style="width: 100%;">
+            <img src="/lib/train_test1.png" alt="train_test" style="width: 100%;">
           </div>
 
           <p>With the naked eye we can detect an overall upward trend, perhaps with a little bump at the front (your brain is pretty good at finding patterns). Lets try a linear fit (i.e. a first degree polynomial):</p>
 
           <div class="w3-center">
-            <img src="../../../lib/1d.png" alt="1d" style="width: 100%;">
+            <img src="/lib/1d.png" alt="1d" style="width: 100%;">
           </div>
 
           <p>On the left in blue, we see the training points along with the best fit line of our model. Overall, our model doesn't really capture the overall trend of our data. We call a model like this <em>underfit.&nbsp;</em>The program is using <a href="https://en.wikipedia.org/wiki/Least_squares" target="_blank" rel="noopener">least squares</a> regression, trying to minimize the sum of the squares of the residuals (a residual is the difference between what the model predicts and the actual value of the data—we use the square so a positive residual is not canceled out by an equal but negative one). On the right, we see the test data, the same linear model, and, plotted in red, the actual function I used to create the data. Notice the MSE value on each graph. MSE stands for the mean squared error and is a calculation of the average of the squares of the residuals. <strong>The gist is this: the closer to zero we can get the MSE, the better our model.</strong> There are many and better ways to measure the success of models, but for our purposes here the MSE will suffice. Let's try a quadratic function (2nd degree polynomial) and see if our MSE decreases.</p>
           <div class="w3-center">
-            <img src="../../../lib/2d.png" alt="2d" style="width: 100%;">
+            <img src="/lib/2d.png" alt="2d" style="width: 100%;">
           </div>
           <p>Pretty good! Notice how close to our target function we get, despite the noise I added (I imagine that normally distributed noise with a small standard deviation averages out in this situation). Our MSE for both our training data and our test data are a lot lower than our linear fit. We should expect this, since the actual function I used is a 2nd degree function. This model actually captures the underlying structure of the data. Often we don't have the luxury of knowing this, but we're learning here, so it's okay.</p>
 
           <p>Now, lets make our model more complicated, really trying to fit the training data with a 10th degree polynomial:</p>
           <div class="w3-center">
-            <img src="../../../lib/10d.png" alt="10d" style="width: 100%;">
+            <img src="/lib/10d.png" alt="10d" style="width: 100%;">
           </div>
 
           <p>Aha! Something interesting has happened. Notice how the MSE on our training data is&nbsp;<em>better</em> than our 2nd degree fit. The 10 degrees of freedom allow the model to squiggle up and down, getting close to all the little bumps and dips in our training data. But look what happens when we test our model: the MSE is&nbsp;<em>greater</em> than our 2nd degree fit! Here, at last, is the impetus behind the title of this post: we have no longer fit the underlying structure of the data—we have fit the noise instead.</p>
@@ -72,21 +72,21 @@
           <p>In the real world, we don't really&nbsp;<em>know</em> the underlying structure of the data. So how can we guard against overfitting? How do we know if we are fitting the noise or if we are beginning to capture the underlying signal? One way to check ourselves is to run multiple "experiments." Keeping our overall dataset the same, we can randomly choose&nbsp;<em>different&nbsp;</em>training and test sets, creating models and tests for each one. Let's do this and plot all of the fits as well as the average fit:</p>
 
           <div class="w3-center">
-            <img src="../../../lib/bootstrapped.png" alt="bootstrapped" style="width: 100%;">
+            <img src="/lib/bootstrapped.png" alt="bootstrapped" style="width: 100%;">
           </div>
           <p>Each of the 100 fits I ran is plotted as a faint, blue line, while the mean fit is plotted with the dark line. We can learn a lot from these graphs. First, notice that the first two graphs don't change much. Each model, no matter which 60% of the points we sample, turns out about the same. But take a look at the 10 degree fit: it's much more wild, sometimes up, others down, bumps here one time, not there the next. This is a nice illustration of&nbsp;<em>variance.&nbsp;</em>The first two models have a low variance: the same point doesn't change a whole lot from model to model. The 10 degree fit has a high variance, with a single point having a much wider range of movement.</p>
 
           <p>I gathered all of the error data for each of these fits:</p>
           <div class="w3-center">
-            <img src="../../../lib/mse_hists.png" alt="mse_hists">
-            <img src="../../../lib/boxplots_mse.png" alt="boxplots_mse">
+            <img src="/lib/mse_hists.png" alt="mse_hists">
+            <img src="/lib/boxplots_mse.png" alt="boxplots_mse">
           </div>
 
           <p>Here we can see the accuracy and the variance. Notice the tall peaks in the histogram for the one and two dimensional models. The errors are all clustered pretty close together (i.e. each model isn't changing too much from iteration to iteration). This is especially noticeable in the boxplot of the two dimensional fit. The colored area represent the central 50% of the measurements, also known as the inter-quartile range or IQR. Notice how narrow it is compared to the other two models.</p>
 
           <p>Directly related to the problem of under/overfitting your data is the <a href="https://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff" target="_blank" rel="noopener">bias-variance trade off</a>. In a nutshell, bias can be defined as error introduced to your prediction due to assumptions made about the structure of the underlying data. In our case, models with a lower degree have a higher bias. The 10 degree polynomial has more degrees of freedom, so it is less constrained with respect to the shapes of trends it can model, whereas the linear and quadratic cases can only model straight lines and parabolas, respectively.&nbsp;<em>However, </em>combining this with what we've already said about the variance of each of models, we see there is a trade off. Models can generally have high bias and low variance, or they can have a low bias and a high variance. Often, the job of a data scientist is to find the sweet spot in the middle. Like this:</p>
           <div class="w3-center">
-            <img src="../../../lib/bias_variance1.png" alt="bias_variance">
+            <img src="/lib/bias_variance1.png" alt="bias_variance">
           </div>
           <p>I have to say I'm proud of this little graph (it was the culmination of four days of coding in between being a dad). I modeled the same 100 training and test sets shown above with every degree of polynomial from 0 to 10, keeping track of the errors along the way. The result is this graph. The average fit is shown with the dark lines. You can see that the blue training line steadily gets closer to zero as we increase the degree of the polynomial. In other words, the more degrees of freedom we give our model (low bias), the better it can fit the training data (and actually, if we have 60 degrees of freedom, it would have a training MSE of exactly zero, since it could produce a function that goes exactly through each of the 60 training points).</p>
 
